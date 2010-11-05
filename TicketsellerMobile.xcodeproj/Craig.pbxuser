@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* TicketsellerMobileAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {615, 270}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 289}";
+		};
+	};
+	1D3623250D0F684500981E51 /* TicketsellerMobileAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 3237}}";
+			sepNavSelRange = "{8963, 0}";
+			sepNavVisRange = "{0, 957}";
+			sepNavWindowFrame = "{{33, 489}, {750, 558}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* TicketsellerMobile */ = {
+		activeExec = 0;
+		executables = (
+			442DB7E2127CC39100B2F4CE /* TicketsellerMobile */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = armv6;
+		activeBuildConfigurationName = Release;
+		activeExecutable = 442DB7E2127CC39100B2F4CE /* TicketsellerMobile */;
+		activeSDKPreference = iphoneos4.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* TicketsellerMobile */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* TicketsellerMobile */,
+		);
+		codeSenseManager = 442DB7F6127CC3B100B2F4CE /* Code sense */;
+		executables = (
+			442DB7E2127CC39100B2F4CE /* TicketsellerMobile */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					665,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 310609522;
+			PBXWorkspaceStateSaveDate = 310609522;
+		};
+		perUserProjectItems = {
+			441F4AA1128386AA008BD6C1 /* PBXBookmark */ = 441F4AA1128386AA008BD6C1 /* PBXBookmark */;
+			441F4AA412838715008BD6C1 /* PlistBookmark */ = 441F4AA412838715008BD6C1 /* PlistBookmark */;
+			441F4AA512838715008BD6C1 /* XCBuildMessageTextBookmark */ = 441F4AA512838715008BD6C1 /* XCBuildMessageTextBookmark */;
+			441F4AA712838715008BD6C1 /* PBXTextBookmark */ = 441F4AA712838715008BD6C1 /* PBXTextBookmark */;
+			441F4AAD12838715008BD6C1 /* PlistBookmark */ = 441F4AAD12838715008BD6C1 /* PlistBookmark */;
+			441F4AAE12838715008BD6C1 /* PBXTextBookmark */ = 441F4AAE12838715008BD6C1 /* PBXTextBookmark */;
+			4471EC4A128382B900D3E604 /* PBXTextBookmark */ = 4471EC4A128382B900D3E604 /* PBXTextBookmark */;
+			4472C219127E47780036D9EE /* PBXTextBookmark */ = 4472C219127E47780036D9EE /* PBXTextBookmark */;
+			4472C21B127E47780036D9EE /* PBXTextBookmark */ = 4472C21B127E47780036D9EE /* PBXTextBookmark */;
+			4472C22F127E4A5B0036D9EE /* PlistBookmark */ = 4472C22F127E4A5B0036D9EE /* PlistBookmark */;
+			44ED06F41280E3CA0016AD4D /* PBXTextBookmark */ = 44ED06F41280E3CA0016AD4D /* PBXTextBookmark */;
+			44ED06F51280E3CA0016AD4D /* PBXTextBookmark */ = 44ED06F51280E3CA0016AD4D /* PBXTextBookmark */;
+			44ED06F61280E3CA0016AD4D /* PlistBookmark */ = 44ED06F61280E3CA0016AD4D /* PlistBookmark */;
+		};
+		sourceControlManager = 442DB7F5127CC3B100B2F4CE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32CA4F630368D1EE00C91783 /* TicketsellerMobile_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 270}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 205}";
+		};
+	};
+	441F4AA1128386AA008BD6C1 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
+	};
+	441F4AA412838715008BD6C1 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleInfoDictionaryVersion,
+		);
+		name = "/Users/Craig/Dropbox/Uni Work/Year 4/Final Year Project/PhoneGap/TicketsellerMobile/TicketsellerMobile-Info.plist";
+		rLen = 0;
+		rLoc = 0;
+	};
+	441F4AA512838715008BD6C1 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'headingAvailable' is deprecated (declared at /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager.h:173)";
+		fRef = 441F4AA612838715008BD6C1 /* Location.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 32;
+		rType = 1;
+	};
+	441F4AA612838715008BD6C1 /* Location.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Location.m;
+		path = /Users/Craig/Documents/PhoneGapLib/Classes/Location.m;
+		sourceTree = "<absolute>";
+	};
+	441F4AA712838715008BD6C1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 441F4AA812838715008BD6C1 /* Location.m */;
+		name = "Location.m: 33";
+		rLen = 0;
+		rLoc = 966;
+		rType = 0;
+		vrLen = 784;
+		vrLoc = 460;
+	};
+	441F4AA812838715008BD6C1 /* Location.m */ = {
+		isa = PBXFileReference;
+		name = Location.m;
+		path = /Users/Craig/Documents/PhoneGapLib/Classes/Location.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {843, 2782}}";
+			sepNavSelRange = "{966, 0}";
+			sepNavVisRange = "{460, 755}";
+		};
+	};
+	441F4AAD12838715008BD6C1 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Craig/Dropbox/Uni Work/Year 4/Final Year Project/PhoneGap/TicketsellerMobile/TicketsellerMobile-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	441F4AAE12838715008BD6C1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TicketsellerMobileAppDelegate.m */;
+		name = "TicketsellerMobileAppDelegate.m: 240";
+		rLen = 0;
+		rLoc = 8963;
+		rType = 0;
+		vrLen = 957;
+		vrLoc = 0;
+	};
+	442DB7E2127CC39100B2F4CE /* TicketsellerMobile */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TicketsellerMobile;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	442DB7F5127CC3B100B2F4CE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	442DB7F6127CC3B100B2F4CE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4471EC4A128382B900D3E604 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TicketsellerMobileAppDelegate.m */;
+		name = "TicketsellerMobileAppDelegate.m: 240";
+		rLen = 0;
+		rLoc = 8963;
+		rType = 0;
+		vrLen = 957;
+		vrLoc = 0;
+	};
+	4472C219127E47780036D9EE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* TicketsellerMobile_Prefix.pch */;
+		name = "TicketsellerMobile_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 205;
+		vrLoc = 0;
+	};
+	4472C21B127E47780036D9EE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TicketsellerMobileAppDelegate.h */;
+		name = "TicketsellerMobileAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 289;
+		vrLoc = 0;
+	};
+	4472C22F127E4A5B0036D9EE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 4472C215127E47260036D9EE /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Craig/Dropbox/Uni Work/Year 4/Final Year Project/PhoneGap/TicketsellerMobile/Entitlements.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	44E6E6C01280B27C00DCC796 /* index.html */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = index.html;
+		path = "/Users/Craig/Dropbox/Uni Work/Year 4/Final Year Project/PhoneGap/TicketsellerMobile/www/index.html";
+		sourceTree = "<absolute>";
+	};
+	44ED06F41280E3CA0016AD4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 44E6E6C01280B27C00DCC796 /* index.html */;
+		name = "index.html: 42";
+		rLen = 0;
+		rLoc = 1282;
+		rType = 0;
+		vrLen = 565;
+		vrLoc = 771;
+	};
+	44ED06F51280E3CA0016AD4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TicketsellerMobileAppDelegate.m */;
+		name = "TicketsellerMobileAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 647;
+		vrLoc = 0;
+	};
+	44ED06F61280E3CA0016AD4D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 30E1352610E2C1420031B30D /* PhoneGap.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Craig/Dropbox/Uni Work/Year 4/Final Year Project/PhoneGap/TicketsellerMobile/PhoneGap.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{59, 215}, {750, 558}}";
+		};
+	};
+}
