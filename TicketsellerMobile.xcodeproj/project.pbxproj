@@ -23,12 +23,12 @@
 		301BF5C1109A6A2B0062928A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C0109A6A2B0062928A /* MediaPlayer.framework */; };
 		301BF5C3109A6A2B0062928A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C2109A6A2B0062928A /* QuartzCore.framework */; };
 		301BF5C5109A6A2B0062928A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */; };
-		302CC88810CD8CCE00C49659 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 302CC88610CD8CCE00C49659 /* Default.png */; };
-		302CC88910CD8CCE00C49659 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 302CC88710CD8CCE00C49659 /* icon.png */; };
 		3053AC6F109B7857006FCFE7 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 3053AC6E109B7857006FCFE7 /* VERSION */; };
 		305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
 		307D28A2123043360040C0FA /* PhoneGapBuildSettings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */; };
 		30E1352710E2C1420031B30D /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* PhoneGap.plist */; };
+		448004601290502600CFFD78 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4480045F1290502600CFFD78 /* icon.png */; };
+		4480047F1290537600CFFD78 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4480047E1290537600CFFD78 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,14 +67,14 @@
 		301BF5C0109A6A2B0062928A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		301BF5C2109A6A2B0062928A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		302CC88610CD8CCE00C49659 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		302CC88710CD8CCE00C49659 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		3053AC6E109B7857006FCFE7 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = PHONEGAPLIB; };
 		305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = PhoneGapBuildSettings.xcconfig; sourceTree = "<group>"; };
 		30E1352610E2C1420031B30D /* PhoneGap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TicketsellerMobile_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsellerMobile_Prefix.pch; sourceTree = "<group>"; };
 		4472C215127E47260036D9EE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		4480045F1290502600CFFD78 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4480047E1290537600CFFD78 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TicketsellerMobile-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,9 +148,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4480047E1290537600CFFD78 /* Default.png */,
+				4480045F1290502600CFFD78 /* icon.png */,
 				30E1352610E2C1420031B30D /* PhoneGap.plist */,
-				302CC88610CD8CCE00C49659 /* Default.png */,
-				302CC88710CD8CCE00C49659 /* icon.png */,
 				3053AC6E109B7857006FCFE7 /* VERSION */,
 				8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */,
 				307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */,
@@ -263,10 +263,10 @@
 			files = (
 				301BF570109A69640062928A /* www in Resources */,
 				3053AC6F109B7857006FCFE7 /* VERSION in Resources */,
-				302CC88810CD8CCE00C49659 /* Default.png in Resources */,
-				302CC88910CD8CCE00C49659 /* icon.png in Resources */,
 				30E1352710E2C1420031B30D /* PhoneGap.plist in Resources */,
 				307D28A2123043360040C0FA /* PhoneGapBuildSettings.xcconfig in Resources */,
+				448004601290502600CFFD78 /* icon.png in Resources */,
+				4480047F1290537600CFFD78 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
