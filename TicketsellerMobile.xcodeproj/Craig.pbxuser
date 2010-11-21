@@ -25,7 +25,7 @@
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Release;
 		activeExecutable = 442DB7E2127CC39100B2F4CE /* TicketsellerMobile */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TicketsellerMobile */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* TicketsellerMobile */,
@@ -57,29 +57,22 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 311446632;
-			PBXWorkspaceStateSaveDate = 311446632;
+			PBXPerProjectTemplateStateSaveDate = 311450141;
+			PBXWorkspaceStateSaveDate = 311450141;
 		};
 		perUserProjectItems = {
-			441F4AAD12838715008BD6C1 = 441F4AAD12838715008BD6C1 /* PlistBookmark */;
-			4472C219127E47780036D9EE = 4472C219127E47780036D9EE /* PBXTextBookmark */;
-			4472C21B127E47780036D9EE = 4472C21B127E47780036D9EE /* PBXTextBookmark */;
-			4472C22F127E4A5B0036D9EE = 4472C22F127E4A5B0036D9EE /* PlistBookmark */;
-			4480044712904C9100CFFD78 /* PBXTextBookmark */ = 4480044712904C9100CFFD78 /* PBXTextBookmark */;
-			4480044A12904C9100CFFD78 /* PlistBookmark */ = 4480044A12904C9100CFFD78 /* PlistBookmark */;
-			4480045312904CBF00CFFD78 /* PBXTextBookmark */ = 4480045312904CBF00CFFD78 /* PBXTextBookmark */;
-			4480045412904CBF00CFFD78 /* PlistBookmark */ = 4480045412904CBF00CFFD78 /* PlistBookmark */;
+			441DD48F12905BA000C73D3C /* PBXTextBookmark */ = 441DD48F12905BA000C73D3C /* PBXTextBookmark */;
+			441DD49112905BA000C73D3C /* PlistBookmark */ = 441DD49112905BA000C73D3C /* PlistBookmark */;
+			4472C219127E47780036D9EE /* PBXTextBookmark */ = 4472C219127E47780036D9EE /* PBXTextBookmark */;
+			4472C21B127E47780036D9EE /* PBXTextBookmark */ = 4472C21B127E47780036D9EE /* PBXTextBookmark */;
+			4472C22F127E4A5B0036D9EE /* PlistBookmark */ = 4472C22F127E4A5B0036D9EE /* PlistBookmark */;
 			4480045912904D7100CFFD78 /* PBXTextBookmark */ = 4480045912904D7100CFFD78 /* PBXTextBookmark */;
-			4480045B12904D7100CFFD78 /* PBXTextBookmark */ = 4480045B12904D7100CFFD78 /* PBXTextBookmark */;
 			4480045C12904D7100CFFD78 /* PBXTextBookmark */ = 4480045C12904D7100CFFD78 /* PBXTextBookmark */;
 			4480045D12904D7100CFFD78 /* PlistBookmark */ = 4480045D12904D7100CFFD78 /* PlistBookmark */;
-			449BF61A12904C5000C95BFD = 449BF61A12904C5000C95BFD /* PBXTextBookmark */;
-			449BF61B12904C5000C95BFD = 449BF61B12904C5000C95BFD /* PlistBookmark */;
-			449BF61C12904C5000C95BFD = 449BF61C12904C5000C95BFD /* PBXTextBookmark */;
-			449BF61E12904C5000C95BFD = 449BF61E12904C5000C95BFD /* PBXTextBookmark */;
-			449BF62012904C5000C95BFD = 449BF62012904C5000C95BFD /* PlistBookmark */;
-			44ED06F51280E3CA0016AD4D = 44ED06F51280E3CA0016AD4D /* PBXTextBookmark */;
-			44ED06F61280E3CA0016AD4D = 44ED06F61280E3CA0016AD4D /* PlistBookmark */;
+			449BF61A12904C5000C95BFD /* PBXTextBookmark */ = 449BF61A12904C5000C95BFD /* PBXTextBookmark */;
+			449BF61B12904C5000C95BFD /* PlistBookmark */ = 449BF61B12904C5000C95BFD /* PlistBookmark */;
+			44ED06F51280E3CA0016AD4D /* PBXTextBookmark */ = 44ED06F51280E3CA0016AD4D /* PBXTextBookmark */;
+			44ED06F61280E3CA0016AD4D /* PlistBookmark */ = 44ED06F61280E3CA0016AD4D /* PlistBookmark */;
 		};
 		sourceControlManager = 442DB7F5127CC3B100B2F4CE /* Source Control */;
 		userBuildSettings = {
@@ -106,23 +99,39 @@
 			sepNavVisRange = "{0, 205}";
 		};
 	};
-	441F4AA812838715008BD6C1 /* Location.m */ = {
+	441DD48F12905BA000C73D3C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 441DD49012905BA000C73D3C /* index.html */;
+		name = "index.html: 11";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 1091;
+		vrLoc = 0;
+	};
+	441DD49012905BA000C73D3C /* index.html */ = {
 		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = Location.m;
-		path = /Users/Craig/Documents/PhoneGapLib/Classes/Location.m;
+		name = index.html;
+		path = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/www/index.html";
 		sourceTree = "<absolute>";
 	};
-	441F4AAD12838715008BD6C1 /* PlistBookmark */ = {
+	441DD49112905BA000C73D3C /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
 		fallbackIsa = PBXBookmark;
 		isK = 0;
 		kPath = (
 		);
-		name = "/Users/Craig/Dropbox/Uni Work/Year 4/Final Year Project/PhoneGap/TicketsellerMobile/TicketsellerMobile-Info.plist";
+		name = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775808;
+		rLoc = 9223372036854775807;
+	};
+	441F4AA812838715008BD6C1 /* Location.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Location.m;
+		path = /Users/Craig/Documents/PhoneGapLib/Classes/Location.m;
+		sourceTree = "<absolute>";
 	};
 	442DB7E2127CC39100B2F4CE /* TicketsellerMobile */ = {
 		isa = PBXExecutable;
@@ -199,48 +208,6 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	4480044712904C9100CFFD78 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 449BF61F12904C5000C95BFD /* index.html */;
-		name = "index.html: 55";
-		rLen = 0;
-		rLoc = 2004;
-		rType = 0;
-		vrLen = 1031;
-		vrLoc = 0;
-	};
-	4480044A12904C9100CFFD78 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	4480045312904CBF00CFFD78 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 449BF61F12904C5000C95BFD /* index.html */;
-		name = "index.html: 13";
-		rLen = 0;
-		rLoc = 628;
-		rType = 0;
-		vrLen = 1028;
-		vrLoc = 0;
-	};
-	4480045412904CBF00CFFD78 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
 	4480045912904D7100CFFD78 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 4480045A12904D7100CFFD78 /* jquery.mobile-1.0a2.min.css */;
@@ -253,19 +220,10 @@
 	};
 	4480045A12904D7100CFFD78 /* jquery.mobile-1.0a2.min.css */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = text.css;
 		name = "jquery.mobile-1.0a2.min.css";
 		path = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/www/jquery-mobile/jquery.mobile-1.0a2.min.css";
 		sourceTree = "<absolute>";
-	};
-	4480045B12904D7100CFFD78 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 449BF61F12904C5000C95BFD /* index.html */;
-		name = "index.html: 13";
-		rLen = 0;
-		rLoc = 628;
-		rType = 0;
-		vrLen = 1059;
-		vrLoc = 0;
 	};
 	4480045C12904D7100CFFD78 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -286,7 +244,7 @@
 		);
 		name = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	449BF61A12904C5000C95BFD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -310,55 +268,12 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	449BF61C12904C5000C95BFD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 449BF61D12904C5000C95BFD /* index.html */;
-		name = "index.html: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 974;
-		vrLoc = 0;
-	};
-	449BF61D12904C5000C95BFD /* index.html */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = text.html;
-		name = index.html;
-		path = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/www/index.html";
-		sourceTree = "<absolute>";
-	};
-	449BF61E12904C5000C95BFD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 449BF61F12904C5000C95BFD /* index.html */;
-		name = "index.html: 55";
-		rLen = 0;
-		rLoc = 2004;
-		rType = 0;
-		vrLen = 732;
-		vrLoc = 1235;
-	};
 	449BF61F12904C5000C95BFD /* index.html */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = text.html;
 		name = index.html;
 		path = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/www/index.html";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 767}}";
-			sepNavSelRange = "{234, 39}";
-			sepNavVisRange = "{0, 1095}";
-		};
-	};
-	449BF62012904C5000C95BFD /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* TicketsellerMobile-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	44ED06F51280E3CA0016AD4D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
