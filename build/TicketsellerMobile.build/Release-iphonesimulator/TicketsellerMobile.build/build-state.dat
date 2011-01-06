@@ -20,8 +20,8 @@ cGenerateDSYMFile "/Users/Craig/Documents/Final Year Project/ticketseller-mobile
 cTouch "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app"
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
-c000000004CC128950000000000000110
-t1287727253
+c000000004D2256830000000000000110
+t1294096003
 s272
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
@@ -130,127 +130,127 @@ t1287727235
 s7657392
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/Classes/TicketsellerMobileAppDelegate.h
-c000000004CCC8C110000000000000121
-t1288473617
+c000000004D2633F50000000000000121
+t1294349301
 s289
 i<UIKit/UIKit.h>
 i"PhoneGapDelegate.h"
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/Classes/TicketsellerMobileAppDelegate.m
-c000000004CD09D91000000000000230A
-t1288740241
+c000000004D2633F5000000000000230A
+t1294349301
 s8970
 i"TicketsellerMobileAppDelegate.h"
 i"PhoneGapViewController.h"
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/Default.png
-c000000004CE01B5100000000000125C5
-t1289755473
+c000000004D2633F500000000000125C5
+t1294349301
 s75205
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/PhoneGap.plist
-c000000004CCC8C11000000000000027E
-t1288473617
+c000000004D2633F5000000000000027E
+t1294349301
 s638
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/PhoneGapBuildSettings.xcconfig
-c000000004CCC8C11000000000000008A
-t1288473617
+c000000004D2633F5000000000000008A
+t1294349301
 s138
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile_Prefix.pch
-c000000004CCC8C1100000000000000CD
-t1288473617
+c000000004D2633F500000000000000CD
+t1294349301
 s205
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app
-t1289755642
+t1294349301
 s374
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app.dSYM
-t1289753871
+t1289757358
 s102
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/Default.png
-t1289755642
+t1294349301
 s75205
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/Info.plist
-t1289753866
+t1294349301
 s958
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/PhoneGap.plist
-t1289753867
+t1294349301
 s255
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/PhoneGapBuildSettings.xcconfig
-t1289753867
+t1294349301
 s138
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/PkgInfo
-t1289753866
+t1294349301
 s8
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/TicketsellerMobile
-t1289753871
+t1294349301
 s267924
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/VERSION
-t1289753866
+t1294349301
 s5
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/icon.png
-t1289754794
+t1294349301
 s77679
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app/www
-t1289755642
+t1294349301
 s204
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/Objects-normal/i386/TicketsellerMobile.LinkFileList
-c000000004CE0150A000000000000016B
-t1289753866
+c000000004D2633F5000000000000016B
+t1294349301
 s363
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/Objects-normal/i386/TicketsellerMobileAppDelegate.o
-t1289753868
+t1294349301
 s51956
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/Objects-normal/i386/main.o
-t1289753868
+t1294349301
 s6524
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/Script-304B58A110DAC018002A0835.sh
-c000000004CE0150A0000000000000027
-t1289753866
+c000000004D2633F50000000000000027
+t1294349301
 s39
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/Script-30E9A9A110B758320022D3BA.sh
-c000000004CE0150A00000000000000BE
-t1289753866
+c000000004D2633F500000000000000BE
+t1294349301
 s190
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/icon.png
-c000000004CE018730000000000012F6F
-t1289754739
+c000000004D2633F50000000000012F6F
+t1294349301
 s77679
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/main.m
-c000000004CCC8C11000000000000018D
-t1288473617
+c000000004D2633F5000000000000018D
+t1294349301
 s397
 i<UIKit/UIKit.h>
 
 N/Users/Craig/Documents/Final Year Project/ticketseller-mobile/www
-c000000004CE015EC00000000000000EE
-t1289754092
-s238
+c000000004D2633F500000000000000CC
+t1294349301
+s204
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/Contacts.h
-c000000004CC76CCA0000000000000ACE
-t1288137930
+c000000004D1126800000000000000ACE
+t1292969600
 s2766
 i<Foundation/Foundation.h>
 i<AddressBook/ABAddressBook.h>
@@ -258,80 +258,80 @@ i<AddressBookUI/AddressBookUI.h>
 i"PhoneGapCommand.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/DebugConsole.h
-c000000004CC76CCA0000000000000170
-t1288137930
+c000000004D1126800000000000000170
+t1292969600
 s368
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 i"PhoneGapCommand.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/JSON.h
-c000000004CC76CCA00000000000008F9
-t1288137930
+c000000004D11268000000000000008F9
+t1292969600
 s2297
 i"SBJSON.h"
 i"NSObject+SBJSON.h"
 i"NSString+SBJSON.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/NSObject+SBJSON.h
-c000000004CC76CCA0000000000000A01
-t1288137930
+c000000004D1126800000000000000A01
+t1292969600
 s2561
 i<Foundation/Foundation.h>
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/NSString+SBJSON.h
-c000000004CC76CCA0000000000000916
-t1288137930
+c000000004D1126800000000000000916
+t1292969600
 s2326
 i<Foundation/Foundation.h>
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/SBJSON.h
-c000000004CC76CCA0000000000000AED
-t1288137930
+c000000004D1126800000000000000AED
+t1292969600
 s2797
 i<Foundation/Foundation.h>
 i"SBJsonParser.h"
 i"SBJsonWriter.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/SBJsonBase.h
-c000000004CC76CCA0000000000000B82
-t1288137930
+c000000004D1126800000000000000B82
+t1292969600
 s2946
 i<Foundation/Foundation.h>
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/SBJsonParser.h
-c000000004CC76CCA0000000000000C0B
-t1288137930
+c000000004D1126800000000000000C0B
+t1292969600
 s3083
 i<Foundation/Foundation.h>
 i"SBJsonBase.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/JSON/SBJsonWriter.h
-c000000004CC76CCA0000000000001140
-t1288137930
+c000000004D1126800000000000001140
+t1292969600
 s4416
 i<Foundation/Foundation.h>
 i"SBJsonBase.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/Location.h
-c000000004CC76CCA00000000000005AB
-t1288137930
-s1451
+c000000004D11268000000000000005D0
+t1292969600
+s1488
 i<UIKit/UIKit.h>
 i<CoreLocation/CoreLocation.h>
 i"PhoneGapCommand.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/PhoneGapCommand.h
-c000000004CC76CCA00000000000002ED
-t1288137930
+c000000004D11268000000000000002ED
+t1292969600
 s749
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/PhoneGapDelegate.h
-c000000004CC76CCA000000000000082E
-t1288137930
-s2094
+c000000004D1126800000000000000848
+t1292969600
+s2120
 i<UIKit/UIKit.h>
 i<CoreLocation/CoreLocation.h>
 i<UIKit/UINavigationController.h>
@@ -342,15 +342,15 @@ i"Contacts.h"
 i"DebugConsole.h"
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/PhoneGapViewController.h
-c000000004CC76CCA00000000000002F6
-t1288137930
+c000000004D11268000000000000002F6
+t1292969600
 s758
 i<UIKit/UIKit.h>
 i<Foundation/Foundation.h>
 
 N/Users/Craig/Documents/PhoneGapLib/Classes/Sound.h
-c000000004CC76CCA0000000000000704
-t1288137930
+c000000004D1126800000000000000704
+t1292969600
 s1796
 i<Foundation/Foundation.h>
 i<AudioToolbox/AudioServices.h>
@@ -358,22 +358,26 @@ i<AVFoundation/AVFoundation.h>
 i"PhoneGapCommand.h"
 
 N/Users/Craig/Documents/PhoneGapLib/VERSION
-c000000004CC76CCA0000000000000005
-t1288137930
+c000000004D1126800000000000000005
+t1292969600
 s5
 
 N/Users/Craig/Documents/PhoneGapLib/build/Release-iphonesimulator/libPhoneGapLib.a
-c000000004CE0150A000000000011EB98
-t1289753866
+c000000004CE022AC000000000011EB98
+t1289757356
 s1174424
 
 N/var/folders/HG/HGRprMlcH0K+WqjS2Bbm8k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TicketsellerMobile_Prefix-dpcvqdxvpahvpggzngguponwdefs/TicketsellerMobile_Prefix.pch.gch
 t1289753868
 s15138000
 
+N/var/folders/K3/K33u0AK2EUuqFT1WWU5HEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TicketsellerMobile_Prefix-dpcvqdxvpahvpggzngguponwdefs/TicketsellerMobile_Prefix.pch.gch
+t1289757357
+s15138000
+
 NTicketsellerMobile-Info.plist
-c000000004CD09FE800000000000005BB
-t1288740840
+c000000004D2633F500000000000005BB
+t1294349301
 s1467
 
 CCheck dependencies
@@ -520,6 +524,9 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@40"Precompile TicketsellerMobile_Prefix.pch311446667#311446668#0(0"0(0#0#91"/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile_Prefix.pch8608086816#2403"    cd "/Users/Craig/Documents/Final Year Project/ticketseller-mobile"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -iquote "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/TicketsellerMobile-generated-files.hmap" "-I/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/TicketsellerMobile-own-target-headers.hmap" "-I/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/TicketsellerMobile-all-target-headers.hmap" -iquote "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/TicketsellerMobile-project-headers.hmap" "-F/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator" -iquote/Users/Craig/Documents/PhoneGapLib/Classes/JSON -iquote/Users/Craig/Documents/PhoneGapLib/Classes "-I/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/include" "-I/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/DerivedSources/i386" "-I/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/TicketsellerMobile.build/Release-iphonesimulator/TicketsellerMobile.build/DerivedSources" -c "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/TicketsellerMobile_Prefix.pch" -o /var/folders/HG/HGRprMlcH0K+WqjS2Bbm8k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TicketsellerMobile_Prefix-dpcvqdxvpahvpggzngguponwdefs/TicketsellerMobile_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/K3/K33u0AK2EUuqFT1WWU5HEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TicketsellerMobile_Prefix-dpcvqdxvpahvpggzngguponwdefs/TicketsellerMobile_Prefix.pch.gch TicketsellerMobile_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CTouch "/Users/Craig/Documents/Final Year Project/ticketseller-mobile/build/Release-iphonesimulator/TicketsellerMobile.app"
 s311448442.895871
