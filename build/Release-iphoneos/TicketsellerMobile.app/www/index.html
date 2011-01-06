@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
   <head>
 	<!-- Change this if you want to allow scaling -->
@@ -6,12 +6,18 @@
 
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-    <title>TicketsellerMobile</title>
+    <title>Ticketseller Mobile</title>
+	
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a2.min.css" type="text/css" />		
+
 	
 	<!-- iPad/iPhone specific css below, add after your main css >
 	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
-	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="jquery-mobile/jquery.mobile-1.0a2.min.css" type="text/css" />		
 	-->
+	<script type="text/javascript" charset="utf-8" src="jquery-mobile/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-mobile/jquery.mobile-1.0a2.min.js"></script>
+
 	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
 
@@ -39,7 +45,19 @@
     </script>
   </head>
   <body onload="onBodyLoad()">
-	<img src="barcode.png">
-	<p>Your Ticket: Y36HW9K7</p>
+	<div data-role="page" data-theme="b" id="jqm-home"> 
+		<div id="jqm-homeheader"> 
+			<p>Ticketseller Mobile</p>
+		</div> 
+		
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+			<li data-role="list-divider">the forum hertfordshire</li> 
+			<li><a href="auditorium/index.html">Auditorium</a></li> 
+			<li><a href="stylebar/index.html">Style Bar</a></li> 
+			<li><a href="attic/index.html">Attic</a></li> 
+			<li><a href="elehouse/index.html">EleHouse</a></li> 
+		</ul> 
+
+	</div>
   </body>
 </html>
