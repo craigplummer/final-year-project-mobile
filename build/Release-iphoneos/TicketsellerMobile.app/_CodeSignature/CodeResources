@@ -6,7 +6,7 @@
 	<dict>
 		<key>Default.png</key>
 		<data>
-		cP+7tq2f8bxuLzot5pgQO5IblE0=
+		mReoXUwKPgbNW+1XjkGi1cWWtds=
 		</data>
 		<key>PhoneGap.plist</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>coderesources</key>
 		<data>
-		ScMk5UgKnci5bWj0PGNnAyGzXkw=
+		1la/+3r30VjJv/xZ3qKqpjVXZu4=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>icon.png</key>
 		<data>
-		A5KNg8Js9qsxs30cwrA2t+RFQOM=
+		aTpxBVqjWwe/90Ui42dO7NlM+ms=
 		</data>
 		<key>www/barcode.png</key>
 		<data>
@@ -42,67 +42,7 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		Ns5C9l8e/1lh8hEyeY0jotut3Hs=
-		</data>
-		<key>www/jquery-mobile/images/ajax-loader.png</key>
-		<data>
-		RYPZsYmpk5Iu0IQrBPlLw6sTRgg=
-		</data>
-		<key>www/jquery-mobile/images/form-check-off.png</key>
-		<data>
-		kmdvfYM7xJfii34S2O3WNNE8ZGw=
-		</data>
-		<key>www/jquery-mobile/images/form-check-on.png</key>
-		<data>
-		njZW1OH0QrHu6tTPnYzBPcc52og=
-		</data>
-		<key>www/jquery-mobile/images/form-radio-off.png</key>
-		<data>
-		NlYz/s5lzEhVBOK1Z5dN44/SLq4=
-		</data>
-		<key>www/jquery-mobile/images/form-radio-on.png</key>
-		<data>
-		k9J6xi0FDFfzbNrMmPKNXmwmHK0=
-		</data>
-		<key>www/jquery-mobile/images/icon-search-black.png</key>
-		<data>
-		D2sg2zAlE4b87LLDpFvoZE8nl+w=
-		</data>
-		<key>www/jquery-mobile/images/icons-18-black.png</key>
-		<data>
-		GoTYT6UzN6bIMQpY3nirESdrb1E=
-		</data>
-		<key>www/jquery-mobile/images/icons-18-white.png</key>
-		<data>
-		iOsV0HNkL6CSOGNrz7wXH3Z6QFc=
-		</data>
-		<key>www/jquery-mobile/images/icons-36-black.png</key>
-		<data>
-		jLjmVsqungUzthMVI5LeK45qIUo=
-		</data>
-		<key>www/jquery-mobile/images/icons-36-white.png</key>
-		<data>
-		SOtw4DsqRIMTpa5KeL3u4mPSyDU=
-		</data>
-		<key>www/jquery-mobile/jquery-1.4.4.min.js</key>
-		<data>
-		t1mQWY7o04lUSO2dCHJq9jEJ+EI=
-		</data>
-		<key>www/jquery-mobile/jquery.mobile-1.0a2.css</key>
-		<data>
-		SypA1Cg4K/Bh4Ct/Ks81x0DjUIQ=
-		</data>
-		<key>www/jquery-mobile/jquery.mobile-1.0a2.js</key>
-		<data>
-		0UxPI+3KLlgWHl+2E4DeECpIXxU=
-		</data>
-		<key>www/jquery-mobile/jquery.mobile-1.0a2.min.css</key>
-		<data>
-		zK2k35o87kMQT7zGG9gTXxLq9Ns=
-		</data>
-		<key>www/jquery-mobile/jquery.mobile-1.0a2.min.js</key>
-		<data>
-		dIUd4I4pOX3tqU6+MnZeuT+dZqQ=
+		kWeS1FbrqGLcM9DWtJdo2SeY37w=
 		</data>
 		<key>www/phonegap.js</key>
 		<data>
