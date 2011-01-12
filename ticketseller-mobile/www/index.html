@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ticketseller Mobile</title>
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script src="lawnchair/Lawnchair.js"></script>
+	<script src="lawnchair/DOMStorageAdaptor.js"></script>
+	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
+	<script src="xui/xui-2.0.0.min.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a2.min.js"></script>
+	
+	<script type="text/javascript">
+	function displayMessage(theMessage) {
+		document.getElementById('theMessage').innerHTML = theMessage;
+	}
+
+	var theData = new Lawnchair({adaptor:'dom'});
+
+	function doLoad() {
+		theData.get('login',
+			function(theLogin){
+				if (theLogin) {
+					document.location = 'home.html';
+				} else {
+					displayMessage ("No Login found...")
+				}
+			});
+	}
+
+		function doSave() {
+			// Retrieve the values from the form elements
+			theEmail = document.getElementById('login_email').value;
+			thePassword = document.getElementById('login_password').value;
+			if (theEmail == "") {
+				displayMessage('Please enter a username');
+			} else if (thePassword == "") {
+				displayMessage('Please enter a password');
+			} else {	 		x$().xhr('http://tickets.cplummer.co.uk/development/verifyLogin.cfm?email='+theEmail+'&password='+thePassword, 	{ callback:
+							function() { 
+								if(this.responseText == "1 ") { // Verified!
+									// Construct an object with the login info
+									var theLogin = {key:'login', Username:theEmail, Password:thePassword};
+									// Send them to the data store
+									theData.save(theLogin);
+									// Go to the main function page
+									document.location = 'home.html';
+
+								} else { // Failed!
+									x$('#theMessage').inner(this.responseText);
+								}; // callback function
+							}
+						}); 
+					}
+				}
+				
+		function doLogout() {
+			theData.remove('login');
+			document.location = '../index.html';
+		}
+	</script>
+</head>
+<body onLoad="doLoad();">
+
+	<div data-role="page" data-theme="a" id="jqm-home">
+		<div data-role="header" data-position="fixed"> 
+			<h1>Ticketseller</h1>
+		</div>
+		<div data-role="content"> 
+
+			<form action="" method="post">
+				<span id="theMessage">&nbsp;</span>
+				<div data-role="fieldcontain"> 
+		         	<label for="login_email">Email:</label> 
+		         	<input type="email" name="login_email" id="login_email" value=""  /> 
+				</div>
+				<div data-role="fieldcontain"> 
+		         	<label for="login_password">Password</label> 
+		         	<input type="password" name="login_password" id="login_password" value="" /> 
+				</div>
+			
+					<button type="button" data-theme="b" onclick="javascript:doSave();">Login</button>
+					<button type="button" data-theme="a" onclick="javascript:doSave();">Register Account</button>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</body>
