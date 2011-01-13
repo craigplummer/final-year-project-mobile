@@ -10,6 +10,7 @@
 #import "PhoneGapDelegate.h"
 
 @interface ticketseller_mobileAppDelegate : PhoneGapDelegate {
+
 }
 
 @end
