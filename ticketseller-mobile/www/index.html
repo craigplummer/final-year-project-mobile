@@ -3,15 +3,50 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Ticketseller Mobile</title>
-	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a2.min.css" />
-	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.5.min.js"></script>
 	<script src="lawnchair/Lawnchair.js"></script>
 	<script src="lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
 	<script src="xui/xui-2.0.0.min.js"></script>
-	<script src="jquery-mobile/jquery.mobile-1.0a2.min.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="navigationBar.js"></script>
+	<script src="NativeControls.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
 	<script type="text/javascript">
+	
+	// Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+	var uicontrols = window.plugins.uicontrols; 
+        uicontrols.createNavigationBar(); 
+		uicontrols.setNavigationBarTitle("Ticketseller");
+		
+		 window.plugins.nativeControls.createTabBar(); 
+		window.plugins.nativeControls.createTabBarItem("id_tab1","tab1","tabButton: TopRated"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab2","tab2","tabButton: Contacts", 
+{ 
+onSelect: function() { alert ("test"); } 
+}); 
+
+window.plugins.nativeControls.createTabBarItem("id_tab3","tab3","tabButton: Bookmarks"); 
+window.plugins.nativeControls.createTabBarItem("id_tab4","tab4","tabButton: More"); 
+window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", 
+"id_tab3", "id_tab4"); 
+window.plugins.nativeControls.showTabBar(); 
+    }
+	
 	function displayMessage(theMessage) {
 		document.getElementById('theMessage').innerHTML = theMessage;
 	}
@@ -61,12 +96,10 @@
 		}
 	</script>
 </head>
-<body onLoad="doLoad();">
+<body onLoad="onLoad();">
 
 	<div data-role="page" data-theme="a" id="jqm-home">
-		<div data-role="header" data-position="fixed"> 
-			<h1>Ticketseller</h1>
-		</div>
+
 		<div data-role="content"> 
 
 			<form action="" method="post">

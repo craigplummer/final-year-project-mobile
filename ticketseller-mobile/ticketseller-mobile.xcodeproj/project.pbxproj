@@ -33,6 +33,10 @@
 		305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
 		307D28A2123043360040C0FA /* PhoneGapBuildSettings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */; };
 		30E1352710E2C1420031B30D /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* PhoneGap.plist */; };
+		442D4C561300A526005D24C8 /* NativeControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C4F1300A526005D24C8 /* NativeControls.m */; };
+		442D4C571300A527005D24C8 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C511300A526005D24C8 /* NavigationBar.m */; };
+		442D4C581300A527005D24C8 /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C531300A526005D24C8 /* PushNotification.m */; };
+		442D4C591300A527005D24C8 /* UIControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C551300A526005D24C8 /* UIControls.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,14 @@
 		307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = PhoneGapBuildSettings.xcconfig; sourceTree = "<group>"; };
 		30E1352610E2C1420031B30D /* PhoneGap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ticketseller_mobile_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ticketseller_mobile_Prefix.pch; sourceTree = "<group>"; };
+		442D4C4E1300A526005D24C8 /* NativeControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeControls.h; sourceTree = "<group>"; };
+		442D4C4F1300A526005D24C8 /* NativeControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeControls.m; sourceTree = "<group>"; };
+		442D4C501300A526005D24C8 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
+		442D4C511300A526005D24C8 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
+		442D4C521300A526005D24C8 /* PushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotification.h; sourceTree = "<group>"; };
+		442D4C531300A526005D24C8 /* PushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotification.m; sourceTree = "<group>"; };
+		442D4C541300A526005D24C8 /* UIControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControls.h; sourceTree = "<group>"; };
+		442D4C551300A526005D24C8 /* UIControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControls.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ticketseller_mobile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ticketseller_mobile-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +227,14 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				442D4C4E1300A526005D24C8 /* NativeControls.h */,
+				442D4C4F1300A526005D24C8 /* NativeControls.m */,
+				442D4C501300A526005D24C8 /* NavigationBar.h */,
+				442D4C511300A526005D24C8 /* NavigationBar.m */,
+				442D4C521300A526005D24C8 /* PushNotification.h */,
+				442D4C531300A526005D24C8 /* PushNotification.m */,
+				442D4C541300A526005D24C8 /* UIControls.h */,
+				442D4C551300A526005D24C8 /* UIControls.m */,
 			);
 			path = Plugins;
 			sourceTree = SOURCE_ROOT;
@@ -340,6 +360,10 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* ticketseller_mobileAppDelegate.m in Sources */,
+				442D4C561300A526005D24C8 /* NativeControls.m in Sources */,
+				442D4C571300A527005D24C8 /* NavigationBar.m in Sources */,
+				442D4C581300A527005D24C8 /* PushNotification.m in Sources */,
+				442D4C591300A527005D24C8 /* UIControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
