@@ -8,7 +8,6 @@
 	<script src="lawnchair/Lawnchair.js"></script>
 	<script src="lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
-	<script src="xui/xui-2.0.0.min.js"></script>
 	<script src="phonegap.js"></script>
 	<script src="navigationBar.js"></script>
 	<script src="NativeControls.js"></script>
@@ -25,6 +24,15 @@
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
+	
+		// If you want to prevent dragging, uncomment this section
+
+	/*function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false); */
+
 
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
@@ -32,20 +40,7 @@
 	var uicontrols = window.plugins.uicontrols; 
         uicontrols.createNavigationBar(); 
 		uicontrols.setNavigationBarTitle("Ticketseller");
-		
-		 window.plugins.nativeControls.createTabBar(); 
-		window.plugins.nativeControls.createTabBarItem("id_tab1","tab1","tabButton: TopRated"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab2","tab2","tabButton: Contacts", 
-{ 
-onSelect: function() { alert ("test"); } 
-}); 
-
-window.plugins.nativeControls.createTabBarItem("id_tab3","tab3","tabButton: Bookmarks"); 
-window.plugins.nativeControls.createTabBarItem("id_tab4","tab4","tabButton: More"); 
-window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", 
-"id_tab3", "id_tab4"); 
-window.plugins.nativeControls.showTabBar(); 
-    }
+		}
 	
 	function displayMessage(theMessage) {
 		document.getElementById('theMessage').innerHTML = theMessage;
@@ -66,34 +61,38 @@ window.plugins.nativeControls.showTabBar();
 
 		function doSave() {
 			// Retrieve the values from the form elements
-			theEmail = document.getElementById('login_email').value;
-			thePassword = document.getElementById('login_password').value;
-			if (theEmail == "") {
+			email = document.getElementById('login_email').value;
+			password = document.getElementById('login_password').value;
+			if (email == "") {
 				displayMessage('Please enter a username');
-			} else if (thePassword == "") {
+			} else if (password == "") {
 				displayMessage('Please enter a password');
-			} else {	 		x$().xhr('http://tickets.cplummer.co.uk/development/verifyLogin.cfm?email='+theEmail+'&password='+thePassword, 	{ callback:
-							function() { 
-								if(this.responseText == "1 ") { // Verified!
-									// Construct an object with the login info
-									var theLogin = {key:'login', Username:theEmail, Password:thePassword};
-									// Send them to the data store
-									theData.save(theLogin);
-									// Go to the main function page
-									document.location = 'home.html';
+			} else {	 		
+			
+			$.ajax({
+			
+			type: "GET",
+			url: 'http://ts.craigplummer.co.uk/account/mobilesignin/?format=json',
+			data: "email="+email+"&password="+password,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == true) { // Verified!
+								// Construct an object with the login info
+								var theLogin = {key:'login', Username:email, Password:password};
+								// Send them to the data store
+								theData.save(theLogin);
+								// Go to the main function page
+								document.location = 'home.html';
 
-								} else { // Failed!
-									x$('#theMessage').inner(this.responseText);
-								}; // callback function
-							}
+							} else { // Failed!
+								displayMessage("Username or password was incorrect" + data.success);
+							}; // callback function
+
+			
+			}
 						}); 
 					}
 				}
-				
-		function doLogout() {
-			theData.remove('login');
-			document.location = '../index.html';
-		}
 	</script>
 </head>
 <body onLoad="onLoad();">
@@ -106,7 +105,7 @@ window.plugins.nativeControls.showTabBar();
 				<span id="theMessage">&nbsp;</span>
 				<div data-role="fieldcontain"> 
 		         	<label for="login_email">Email:</label> 
-		         	<input type="email" name="login_email" id="login_email" value=""  /> 
+		         	<input type="email" name="login_email" id="login_email" value="" autocorrect="off"  /> 
 				</div>
 				<div data-role="fieldcontain"> 
 		         	<label for="login_password">Password</label> 

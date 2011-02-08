@@ -3,35 +3,63 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Ticketseller Mobile</title>
-	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a2.min.css" />
-	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.5.min.js"></script>
 	<script src="lawnchair/Lawnchair.js"></script>
 	<script src="lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
-	<script src="xui/xui-2.0.0.min.js"></script>
-	<script src="jquery-mobile/jquery.mobile-1.0a2.min.js"></script>
-</head>
-<body>
-	<div data-role="page" data-theme="b" id="jqm-home">
+	<script src="phonegap.js"></script>
+	<script src="navigationBar.js"></script>
+	<script src="NativeControls.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
-		<div data-role="header" data-position="fixed" data-theme="a"> 
-		<h1>Ticketseller</h1>
-		<a href="account/account.html" data-rel="dialog" data-transition="pop" data-icon="gear" class="ui-btn-right">Account</a
-		</div>
+	<script type="text/javascript">
+	
+	// Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+		// If you want to prevent dragging, uncomment this section
+
+	/*function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false); */
+
+
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+		window.plugins.nativeControls.createTabBar(); 
+		window.plugins.nativeControls.createTabBarItem("id_tab1","Home","tabButton:TopRated"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","tabButton:Contacts", 
+{ 
+onSelect: function() { alert ("test"); } 
+}); 
+
+window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","tabButton:Bookmarks"); 
+window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","tabButton:Bookmarks");
+window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More"); 
+window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", 
+"id_tab3", "id_tab4", "id_tab5"); 
+window.plugins.nativeControls.showTabBar(); 
+    }
+</script>
+</head>
+<body onLoad="onLoad();">
+	<div data-role="page" data-theme="b" id="jqm-home">
 		
 		<div data-role="content">
 			<p>Login Sucessful</p>
 		</div>
-		<div data-role="footer" data-theme="a" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="home.html" class="ui-btn-active" data-icon="grid">Home</a></li>
-					<li><a href="alerts/alerts.html" data-icon="grid">Alerts</a></li>
-					<li><a href="browse/browse.html" data-icon="grid">Browse</a></li>
-					<li><a href="mytickets/myTickets.html" data-icon="grid">Tickets</a></li>
-					<li><a href="more/more.html" data-icon="grid" rel="external">More</a></li>
-				</ul>
-			</div><!-- /navbar -->
+
 		</div>
 	</div>
 </body>

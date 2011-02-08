@@ -53,6 +53,7 @@
     tabBar.delegate = self;
     tabBar.multipleTouchEnabled   = NO;
     tabBar.autoresizesSubviews    = YES;
+	tabBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     tabBar.hidden                 = YES;
     tabBar.userInteractionEnabled = YES;
 	tabBar.opaque = YES;
@@ -97,7 +98,7 @@
 	}
 	
     tabBar.hidden = NO;
-     CGRect webViewBounds = originalWebViewBounds;
+     CGRect webViewBounds = originalWebViewBounds = webView.superview.bounds; 
      CGRect tabBarBounds;
 	
 	NSNotification* notif = [NSNotification notificationWithName:@"PGLayoutSubviewAdded" object:tabBar];
@@ -105,9 +106,10 @@
 	
      if (atBottom) 
 	 {
-         tabBarBounds = CGRectMake(
+		 tabBar.autoresizingMask |= UIViewAutoresizingFlexibleTopMargin;
+		 tabBarBounds = CGRectMake(
              webViewBounds.origin.x,
-             webViewBounds.origin.y + webViewBounds.size.height - height + 89 - offsetRect.size.height,
+             webViewBounds.origin.y + webViewBounds.size.height - height,
              webViewBounds.size.width,
              height
          );
@@ -115,11 +117,12 @@
             webViewBounds.origin.x,
             webViewBounds.origin.y,
             webViewBounds.size.width,
-            webViewBounds.size.height - height + 89 - offsetRect.size.height
+            webViewBounds.size.height - height
          );
      } 
 	 else 
 	 {
+		 tabBar.autoresizingMask |= UIViewAutoresizingFlexibleBottomMargin;
          tabBarBounds = CGRectMake(
              webViewBounds.origin.x,
              webViewBounds.origin.y,
