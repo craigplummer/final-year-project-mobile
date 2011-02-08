@@ -109,7 +109,7 @@
 		 tabBar.autoresizingMask |= UIViewAutoresizingFlexibleTopMargin;
 		 tabBarBounds = CGRectMake(
              webViewBounds.origin.x,
-             webViewBounds.origin.y + webViewBounds.size.height - height,
+             webViewBounds.origin.y + webViewBounds.size.height - height - 25,
              webViewBounds.size.width,
              height
          );

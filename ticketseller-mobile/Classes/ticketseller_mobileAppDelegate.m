@@ -21,7 +21,8 @@
 
 - (BOOL)application:(UIApplication*)application  
 didFinishLaunchingWithOptions:(NSDictionary*)launchOptions  
-{  
+{
+	
 	// Register for alert notifications  
 	[application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge];  
 	
@@ -105,6 +106,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
  */
 - (void)webViewDidFinishLoad:(UIWebView *)theWebView 
 {
+	
 	return [ super webViewDidFinishLoad:theWebView ];
 }
 

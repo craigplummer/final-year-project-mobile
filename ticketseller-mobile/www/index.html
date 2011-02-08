@@ -37,19 +37,13 @@
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
     function onDeviceReady() {
-	var uicontrols = window.plugins.uicontrols; 
-        uicontrols.createNavigationBar(); 
-		uicontrols.setNavigationBarTitle("Ticketseller");
-		}
 	
-	function displayMessage(theMessage) {
-		document.getElementById('theMessage').innerHTML = theMessage;
-	}
-
+	
+	
 	var theData = new Lawnchair({adaptor:'dom'});
-
-	function doLoad() {
-		theData.get('login',
+	
+	
+	theData.get('login',
 			function(theLogin){
 				if (theLogin) {
 					document.location = 'home.html';
@@ -57,9 +51,18 @@
 					displayMessage ("No Login found...")
 				}
 			});
+
+	}
+	
+	function displayMessage(theMessage) {
+		document.getElementById('theMessage').innerHTML = theMessage;
 	}
 
+
 		function doSave() {
+		
+			var theData = new Lawnchair({adaptor:'dom'});
+		
 			// Retrieve the values from the form elements
 			email = document.getElementById('login_email').value;
 			password = document.getElementById('login_password').value;

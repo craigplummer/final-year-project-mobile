@@ -15,6 +15,8 @@
 		var theData = new Lawnchair({adaptor:'dom'});
 		
 			function doLogout() {
+			window.plugins.nativeControls.showTabBar();
+			window.plugins.uicontrols.hideNavigationBar();
 			theData.remove('login');
 			document.location = '../index.html';
 		}
@@ -22,13 +24,9 @@
 </head>
 <body>
 	<div data-role="page" data-theme="b" id="jqm-home">
-	
-		<div data-role="header" data-position="fixed" data-theme="a"> 
-		<h1>Ticketseller</h1>
-		<a href="account/account.html" data-rel="dialog" data-transition="pop" data-icon="gear" class="ui-btn-right">Account</a>
-		</div>
+
 		
-		<div data-role="content" style="min-height:300px;">
+		<div data-role="content">
 		
 		<ul data-role="listview" data-theme="g">
 			<li><a href="resturant-finder.html">Resturant Finder</a></li>
@@ -37,17 +35,7 @@
 		</ul>
 		
 		</div>
-		<div data-role="footer" data-theme="a" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="../home.html" data-icon="grid">Home</a></li>
-					<li><a href="../alerts/alerts.html" data-icon="grid">Alerts</a></li>
-					<li><a href="../browse/browse.html" data-icon="grid">Browse</a></li>
-					<li><a href="../mytickets/myTickets.html" data-icon="grid">Tickets</a></li>
-					<li><a href="../more/more.html" data-icon="grid" class="ui-btn-active">More</a></li>
-				</ul>
-			</div><!-- /navbar -->
-		</div>
+
 	</div>
 </body>
 </html>

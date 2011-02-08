@@ -39,17 +39,21 @@
     function onDeviceReady() {
 		window.plugins.nativeControls.createTabBar(); 
 		window.plugins.nativeControls.createTabBarItem("id_tab1","Home","tabButton:TopRated"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","tabButton:Contacts", 
-{ 
-onSelect: function() { alert ("test"); } 
-}); 
+		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","tabButton:Contacts"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","tabButton:Bookmarks"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","tabButton:Bookmarks");
+		window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More", {
+		onSelect: function(){
+			document.location = 'more/more.html'}
+		}); 
+		window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", "id_tab3", "id_tab4", "id_tab5"); 
+		window.plugins.nativeControls.showTabBar();
 
-window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","tabButton:Bookmarks"); 
-window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","tabButton:Bookmarks");
-window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More"); 
-window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", 
-"id_tab3", "id_tab4", "id_tab5"); 
-window.plugins.nativeControls.showTabBar(); 
+	var uicontrols = window.plugins.uicontrols; 
+        uicontrols.createNavigationBar(); 
+		uicontrols.setNavigationBarTitle("Ticketseller");
+		uicontrols.showNavigationBar();
+		
     }
 </script>
 </head>
