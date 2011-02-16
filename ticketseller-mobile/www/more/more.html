@@ -3,20 +3,18 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Ticketseller Mobile</title>
-	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a2.min.css" />
-	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a3.min.css" />
+	<script src="../scripts/jquery-1.5.min.js"></script>
 	<script src="../lawnchair/Lawnchair.js"></script>
 	<script src="../lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="../lawnchair/LawnchairAdaptorHelpers.js"></script>
 	<script src="../xui/xui-2.0.0.min.js"></script>
-	<script src="../jquery-mobile/jquery.mobile-1.0a2.min.js"></script>
+	<script src="../jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
 	<script type="text/javascript">
 		var theData = new Lawnchair({adaptor:'dom'});
 		
 			function doLogout() {
-			window.plugins.nativeControls.showTabBar();
-			window.plugins.uicontrols.hideNavigationBar();
 			theData.remove('login');
 			document.location = '../index.html';
 		}
@@ -28,7 +26,7 @@
 		
 		<div data-role="content">
 		
-		<ul data-role="listview" data-theme="g">
+		<ul data-role="listview" data-theme="c">
 			<li><a href="resturant-finder.html">Resturant Finder</a></li>
 			<li><a href="../account/account.html">Account Settings</a></li>
 			<li><a onclick="javascript:doLogout();">Logout</a></li>

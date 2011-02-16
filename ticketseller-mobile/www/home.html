@@ -38,10 +38,14 @@
     //
     function onDeviceReady() {
 		window.plugins.nativeControls.createTabBar(); 
-		window.plugins.nativeControls.createTabBarItem("id_tab1","Home","tabButton:TopRated"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","tabButton:Contacts"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","tabButton:Bookmarks"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","tabButton:Bookmarks");
+		window.plugins.nativeControls.createTabBarItem("id_tab1","Dashboard","www/53-house.png", {
+		onSelect: function (){
+			document.location = '/home.html'}
+		});
+		 
+		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","www/06-magnify.png"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","www/28-star.png"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","www/162-receipt.png");
 		window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More", {
 		onSelect: function(){
 			document.location = 'more/more.html'}
@@ -61,7 +65,30 @@
 	<div data-role="page" data-theme="b" id="jqm-home">
 		
 		<div data-role="content">
-			<p>Login Sucessful</p>
+			
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+			<li data-role="list-divider">Featured</li> 
+			<li><a href="events/featured.html">Featured Events</a></li> 
+			<li><a href="events/special.html">Special Offers</a></li>
+		</ul> 
+		
+		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+			<li data-role="list-divider">Events</li> 
+			<li><a href="events/venue.html">Events by Venue</a></li> 
+			<li><a href="events/categories.html">Events by Category</a></li>
+			<li><a href="events/nearby.html">Events Nearby</a></li>
+
+		</ul> 
+		
+		
+		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+			<li data-role="list-divider">My Account</li> 
+			<li><a href="account/alerts.html">My Alerts</a></li> 
+			<li><a href="account/tickets.html">My Tickets</a></li>
+			<li><a href="account/settings.html">Account Settings</a></li>
+		</ul> 
+		
+			
 		</div>
 
 		</div>
