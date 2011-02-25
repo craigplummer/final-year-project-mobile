@@ -5,19 +5,31 @@
 	<title>Ticketseller Mobile</title>
 	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a3.min.css" />
 	<script src="../scripts/jquery-1.5.min.js"></script>
+	<script type="text/javascript">
+		
+	$(document).ready(function() {	
+		
+		$.getJSON('http://ts.craigplummer.co.uk/events/featured/?format=json', function(data) {
+			
+			$.each(data, function(entryIndex, entry){
+				var html ='<li>';
+				html += '<a href="eventdetail.html?id=' + entry['id'] + '">'
+				html += entry['eventtitle']; + '</a>'
+				html += '</li>';
+				$('#list').append(html);
+			});
+		});
+		
+	
+	});
+	
+	</script>
 	<script src="../lawnchair/Lawnchair.js"></script>
 	<script src="../lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="../lawnchair/LawnchairAdaptorHelpers.js"></script>
 	<script src="../jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
-	<script type="text/javascript">
-		var theData = new Lawnchair({adaptor:'dom'});
-		
-			function doLogout() {
-			theData.remove('login');
-			document.location = '../index.html';
-		}
-	</script>
+
 </head>
 <body>
 	<div data-role="page" data-theme="b" id="jqm-home">
@@ -25,10 +37,8 @@
 		
 		<div data-role="content">
 		
-		<ul data-role="listview" data-theme="c">
-			<li><a href="resturant-finder.html">Resturant Finder</a></li>
-			<li><a href="../account/account.html">Account Settings</a></li>
-			<li><a onclick="javascript:doLogout();">Logout</a></li>
+		<ul data-role="listview" data-theme="c" id="list">
+			<li>Test</li>
 		</ul>
 		
 		</div>
@@ -36,3 +46,4 @@
 	</div>
 </body>
 </html>
+

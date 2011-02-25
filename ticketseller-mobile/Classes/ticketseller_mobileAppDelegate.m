@@ -29,6 +29,8 @@ didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 	// Add the view controller's view to the window and display.  
 	[window addSubview:viewController.view];  
 	[window makeKeyAndVisible];  
+	
+	
     
     return [super application:application didFinishLaunchingWithOptions:launchOptions]; 
 	return YES;
@@ -86,8 +88,8 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 	}  
 	
 	// Send our Urban Airship credentials  
-	NSURLCredential *airshipCredentials = [NSURLCredential credentialWithUser:@"eoXkGUN2QjypmZq5PaPLcw"  
-																	 password:@"LFmH1D3pRxagycdD5KGknw"  
+	NSURLCredential *airshipCredentials = [NSURLCredential credentialWithUser:@"D-skQtWcRzyQ-dIeEys_aQ"  
+																	 password:@"-4xcnRtdToa9_ksloDruwQ"  
 																  persistence:NSURLCredentialPersistenceNone];  
 	[[challenge sender] useCredential:airshipCredentials  
 		   forAuthenticationChallenge:challenge];  

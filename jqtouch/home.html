@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Ticketseller</title>
+
+	<style type="text/css" media="screen">@import "styles/jqtouch.css";</style>
+    <style type="text/css" media="screen">@import "themes/artspot/theme.css";</style>
+    <style type="text/css" media="screen">@import "extensions/jqt.bars/jqt.bars.artspot.css";</style> 
+    <script src="scripts/jquery-1.5.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+                var jQT = new $.jQTouch({
+                });
+   </script>
+	
+</head>
+<body>
+<div id="tabbar"> 
+	<div id="tabbar-pane"> 
+    <ul> 
+      <li> 
+        <a href="#about" animation="slideup"> 
+          <strong>Dashboard</strong> 
+        </a> 
+      </li> 
+      <li> 
+        <a href="#ui" mask="bar_img/iphone.png" mask2x="bar_img/iphone@2x.png"> 
+          <strong>My Alerts</strong> 
+          <small class="badge right">5</small> 
+        </a> 
+      </li> 
+      <li> 
+        <a href="#animations" mask="bar_img/animation.png" mask2x="bar_img/animation@2x.png"> 
+          <strong>My Tickets</strong> 
+          <small class="badge right">8</small> 
+        </a> 
+      </li> 
+      <li> 
+        <a href="#ajax" mask="bar_img/ajax.png" mask2x="bar_img/ajax@2x.png"> 
+          <strong>Browse</strong> 
+          <small class="badge right">4</small> 
+        </a> 
+      </li> 
+      <li> 
+        <a href="#callbacks" mask="bar_img/events.png" mask2x="bar_img/events@2x.png"> 
+          <strong>More</strong> 
+          <small class="badge right">4</small> 
+        </a> 
+      </li> 
+    </ul> 
+  </div> 
+</div>
+<div id="jqt">
+<div id="home">
+	<div class="toolbar">
+		<h1>Ticketseller</h1>
+	</div>
+	<h2>Featured</h2>
+	<ul class="rounded"> 
+		<li class="arrow"><a href="events/featured.html">Featured Events</a></li>
+		<li class="arrow"><a href="events/specialoffer.html">Special Offers</a></li>
+	</ul>
+	<h2>Events</h2>
+	<ul class="rounded"> 
+		<li class="arrow"><a href="events/venue.html">Events by Venue</a></li>
+		<li class="arrow"><a href="events/category.html">Events by Category</a></li>
+		<li class="arrow"><a href="events/nearby.html">Events Nearby</a></li>
+	</ul>
+	<h2>My Account</h2>
+	<ul class="rounded"> 
+		<li class="arrow"><a href="account/alerts.html">My Alerts</a></li>
+		<li class="arrow"><a href="account/tickets.html">My Tickets</a></li>
+		<li class="arrow"><a href="account/settings.html">Account Settings</a></li>
+	</ul>
+</div>
+</div>
+</body>
+</html>

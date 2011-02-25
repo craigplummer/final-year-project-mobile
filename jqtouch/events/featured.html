@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Ticketseller</title>
+
+	<style type="text/css" media="screen">@import "../styles/jqtouch.css";</style>
+    <style type="text/css" media="screen">@import "../themes/artspot/theme.css";</style>
+    <script src="../scripts/jquery-1.5.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../scripts/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+                var jQT = new $.jQTouch({
+                });
+   </script>
+   <script type="text/javascript">
+   		
+   		
+   		
+   		$.getJSON('http://ts.craigplummer.co.uk/events/featured/?format=json', function(data) {
+   			
+   			$.each(data, function(entryIndex, entry){
+   				var html ='<li class="arrow">';
+   				html += '<a href="eventdetail.html?id=' + entry['id'] + '">'
+   				html += entry['eventtitle']; + '</a>'
+   				html += '</li>';
+   				$('#featuredEvents').append(html);
+   			});
+   		});
+   		
+   	</script>
+   
+	
+</head>
+<body>
+
+<div id="events">
+	<div class="toolbar">
+		<h1>Ticketseller</h1>
+	
+	</div>
+	<ul class="edgetoedge" id="featuredEvents">
+	</ul>
+	</div>
+
+</body>
+</html>

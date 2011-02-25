@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Ticketseller Login</title>
+
+	<style type="text/css" media="screen">@import "styles/jqtouch.css";</style>
+    <style type="text/css" media="screen">@import "themes/artspot/theme.css";</style>
+    <script src="scripts/jquery-1.5.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="scripts/lawnchair/Lawnchair.js"></script>
+    <script src="scripts/lawnchair/adaptors/DOMStorageAdaptor.js"></script>
+    <script src="scripts/lawnchair/adaptors/LawnchairAdaptorHelpers.js"></script>
+    <script type="text/javascript" charset="utf-8">
+                var jQT = new $.jQTouch({
+                });
+                
+    </script>
+    <script type="text/javascript" charset="utf-8">
+    function displayMessage(theMessage) {
+    		document.getElementById('theMessage').innerHTML = theMessage;
+    	}
+    
+    
+    		function doSave() {
+    		
+    			var theData = new Lawnchair({adaptor:'dom'});
+    		
+    			// Retrieve the values from the form elements
+    			email = document.getElementById('login_email').value;
+    			password = document.getElementById('login_password').value;
+    			if (email == "") {
+    				displayMessage('Please enter a username');
+    			} else if (password == "") {
+    				displayMessage('Please enter a password');
+    			} else {	 		
+    			
+    			$.ajax({
+    			
+    			type: "GET",
+    			url: 'http://ts.craigplummer.co.uk/account/mobilesignin/?format=json',
+    			data: "email="+email+"&password="+password,
+    			dataType: "json",
+    			success: function(data) {
+    			if(data.success == true) { // Verified!
+    								// Construct an object with the login info
+    								var theLogin = {key:'login', Username:email, Password:password};
+    								// Send them to the data store
+    								theData.save(theLogin);
+    								// Go to the main function page
+    								document.location = 'home.html';
+    
+    							} else { // Failed!
+    								displayMessage("Username or password was incorrect" + data.success);
+    							}; // callback function
+    
+    			
+    			}
+    						}); 
+    						}
+    						}
+    
+    </script>
+	
+</head>
+<body>
+
+<div id="login">
+	<div class="toolbar">
+		<h1>Ticketseller</h1>
+	</div>
+	<span id="theMessage">&nbsp;</span>
+	<form action="" method="post">
+	<ul class="rounded"> 
+		<li><input type="email" name="login_email" id="login_email" value="" autocorrect="off" placeholder="E-Mail Address" /></li>
+		<li><input type="password" name="login_password" id="login_password" value="" placeholder="Password" /> </li>
+	</ul>
+	<a style="margin:10px;" class="greenButton" onclick="javascript:doSave();">Login</a>
+	<a style="margin:10px;" class="whiteButton">Register</a>
+	</form>
+</div>
+
+</body>
+</html>
