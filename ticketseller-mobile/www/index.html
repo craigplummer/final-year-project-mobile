@@ -3,14 +3,16 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Ticketseller Mobile</title>
+	
 	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
 	<script src="http://code.jquery.com/jquery-1.5.min.js"></script>
 	<script src="lawnchair/Lawnchair.js"></script>
 	<script src="lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
 	<script src="phonegap.js"></script>
-	<script src="navigationBar.js"></script>
-	<script src="NativeControls.js"></script>
+	<script src="scripts/navigationBar.js"></script>
+	<script src="scripts/NativeControls.js"></script>
+	<script src="scripts/ChildBrowser.js"></script>
 	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
 	<script type="text/javascript">
@@ -21,9 +23,16 @@
     // When PhoneGap is loaded and talking with the native device,
     // it will call the event `deviceready`.
     // 
+	var client_browser;
+	
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
+	
+	 
+
+
+
 	
 		// If you want to prevent dragging, uncomment this section
 
@@ -38,6 +47,9 @@
     //
     function onDeviceReady() {
 	
+	
+	try {client_browser = ChildBrowser.install();} 
+	catch(e) { client_browser = null };
 	
 	
 	var theData = new Lawnchair({adaptor:'dom'});
@@ -54,18 +66,29 @@
 
 	}
 	
+	function gotDeviceToken(token){ 
+			document.getElementById('devicetoken').innerHTML = token; 
+		} 
+	
+	
 	function displayMessage(theMessage) {
 		document.getElementById('theMessage').innerHTML = theMessage;
 	}
 
+	var db = window.openDatabase("ticketseller", "1.0", "Ticketseller DB", 1000000);
+	
+
+function loadRegister(){if (client_browser != null 
+) {window.plugins.childBrowser.showWebPage("http://ts.craigplummer.co.uk/account/mobileregister");}} 
 
 		function doSave() {
 		
 			var theData = new Lawnchair({adaptor:'dom'});
+			var userAccount = new Lawnchair({adaptor: 'dom'});
 		
 			// Retrieve the values from the form elements
-			email = document.getElementById('login_email').value;
-			password = document.getElementById('login_password').value;
+			var email = document.getElementById('login_email').value;
+			var password = document.getElementById('login_password').value;
 			if (email == "") {
 				displayMessage('Please enter a username');
 			} else if (password == "") {
@@ -80,7 +103,7 @@
 			dataType: "json",
 			success: function(data) {
 			if(data.success == true) { // Verified!
-								// Construct an object with the login info
+		
 								var theLogin = {key:'login', Username:email, Password:password};
 								// Send them to the data store
 								theData.save(theLogin);
@@ -88,13 +111,16 @@
 								document.location = 'home.html';
 
 							} else { // Failed!
-								displayMessage("Username or password was incorrect" + data.success);
+								displayMessage("Username or password was incorrect");
 							}; // callback function
 
 			
 			}
 						}); 
 					}
+					
+
+					
 				}
 	</script>
 </head>
@@ -105,6 +131,7 @@
 		<div data-role="content"> 
 
 			<form action="" method="post">
+				<span id="devicetoken">&nbsp;</span>
 				<span id="theMessage">&nbsp;</span>
 				<div data-role="fieldcontain"> 
 		         	<label for="login_email">Email:</label> 
@@ -114,12 +141,12 @@
 		         	<label for="login_password">Password</label> 
 		         	<input type="password" name="login_password" id="login_password" value="" /> 
 				</div>
-			
+					
 					<button type="button" data-theme="b" onclick="javascript:doSave();">Login</button>
-					<button type="button" data-theme="a" onclick="javascript:doSave();">Register Account</button>
+					
 				</div>
 			</form>
-			
+			<button type="button" data-theme="a" onclick="loadRegister();">Register Account</button>
 		</div>
 	</div>
 </body>

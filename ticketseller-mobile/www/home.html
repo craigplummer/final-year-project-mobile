@@ -9,8 +9,8 @@
 	<script src="lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
 	<script src="phonegap.js"></script>
-	<script src="navigationBar.js"></script>
-	<script src="NativeControls.js"></script>
+	<script src="scripts/navigationBar.js"></script>
+	<script src="scripts/NativeControls.js"></script>
 	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
 	<script type="text/javascript">
@@ -21,6 +21,9 @@
     // When PhoneGap is loaded and talking with the native device,
     // it will call the event `deviceready`.
     // 
+	
+	var client_browser;
+	
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
@@ -37,10 +40,11 @@
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
     function onDeviceReady() {
+		
 		window.plugins.nativeControls.createTabBar(); 
 		window.plugins.nativeControls.createTabBarItem("id_tab1","Dashboard","www/53-house.png", {
 		onSelect: function (){
-			document.location = '/home.html'}
+			document.location = 'home.html'}
 		});
 		 
 		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","www/06-magnify.png"); 
@@ -48,15 +52,20 @@
 		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","www/162-receipt.png");
 		window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More", {
 		onSelect: function(){
-			document.location = 'more/more.html'}
+			document.location = 'more.html'}
 		}); 
 		window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", "id_tab3", "id_tab4", "id_tab5"); 
 		window.plugins.nativeControls.showTabBar();
-
-	var uicontrols = window.plugins.uicontrols; 
+		
+		var uicontrols = window.plugins.uicontrols; 
         uicontrols.createNavigationBar(); 
 		uicontrols.setNavigationBarTitle("Ticketseller");
 		uicontrols.showNavigationBar();
+		
+		function loadRegister(){window.plugins.childBrowser.showWebPage("http://ts.craigplummer.co.uk/account/mobileregister");
+		
+
+		}
 		
     }
 </script>
@@ -65,10 +74,12 @@
 	<div data-role="page" data-theme="b" id="jqm-home">
 		
 		<div data-role="content">
+		
+			<p id="devicetoken">Hello</p>
 			
 			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
 			<li data-role="list-divider">Featured</li> 
-			<li><a href="events/featured.html">Featured Events</a></li> 
+			<li><a onclick="PhoneGap.exec('ChildBrowserCommand.showWebPage','http://mobile.twitter.com/company');">Featured Events</a></li> 
 			<li><a href="events/special.html">Special Offers</a></li>
 		</ul> 
 		

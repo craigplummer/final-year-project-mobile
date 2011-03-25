@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ticketseller Mobile</title>
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
+	<script src="scripts/jquery-1.5.min.js"></script>
+	<script src="lawnchair/Lawnchair.js"></script>
+	<script src="lawnchair/DOMStorageAdaptor.js"></script>
+	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="scripts/ChildBrowser.js"></script>
+	
+	<script type="text/javascript">
+	
+	// Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+	var twitterEmail;
+	var client_browser;
+	var errorHandler;
+	var ts;
+	var userData = new Lawnchair('new');
+	
+    function onLoad() {
+
+						
+	
+		console.log(userData);
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+		// If you want to prevent dragging, uncomment this section
+
+	/*function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false); */
+
+
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+	
+		
+	
+			
+    }
+	
+
+		   
+
+	function launchTwitter() {
+	
+	console.log("hello world");
+	
+
+	
+	userData.get("login", function(r) {
+	
+	console.log(r.Username);
+	twitter = "http://ts.craigplummer.co.uk/account/twitter/?email="+r.Username;
+	console.log(twitter)
+	PhoneGap.exec('ChildBrowserCommand.showWebPage', twitter);
+	});
+	
+	
+	}
+
+	
+	
+	
+		
+
+	
+	
+	var theData = new Lawnchair({adaptor:'dom'});
+		
+			function doLogout() {
+			theData.remove('login');
+			document.location = '../index.html';
+		}
+		
+	</script>
+</head>
+<body onLoad="onLoad();">
+	<div data-role="page" data-theme="b" id="jqm-home">
+
+		
+		<div data-role="content">
+		
+		<ul data-role="listview" data-theme="c">
+			<li><a href="resturant-finder.html">Resturant Finder</a></li>
+			<li><a href="launchAccount();">Account Settings</a></li>
+			<li><a onclick="javascript:launchTwitter();">Twitter Settings</a></li>
+			<li><a onclick="javascript:doLogout();">Logout</a></li>
+		</ul>
+		
+		</div>
+
+	</div>
+</body>
+</html>

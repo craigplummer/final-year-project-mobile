@@ -60,6 +60,10 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 	[connection start];  
 	
 	NSLog(@"We successfully registered for push notifications");  
+	
+	NSString * jsCallBack = nil;
+	jsCallBack = [[NSString alloc] initWithFormat:@"gotDeviceToken('%@');", tokenString]; 
+    [webView stringByEvaluatingJavaScriptFromString:jsCallBack]; 
 }  
 
 - (void)application:(UIApplication*)application  

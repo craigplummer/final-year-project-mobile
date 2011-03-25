@@ -37,6 +37,9 @@
 		442D4C571300A527005D24C8 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C511300A526005D24C8 /* NavigationBar.m */; };
 		442D4C581300A527005D24C8 /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C531300A526005D24C8 /* PushNotification.m */; };
 		442D4C591300A527005D24C8 /* UIControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D4C551300A526005D24C8 /* UIControls.m */; };
+		445FE3BF133AB1520038A8BB /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 445FE3BB133AB1520038A8BB /* ChildBrowserCommand.m */; };
+		445FE3C0133AB1520038A8BB /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445FE3BD133AB1520038A8BB /* ChildBrowserViewController.m */; };
+		445FE3C1133AB1520038A8BB /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 445FE3BE133AB1520038A8BB /* ChildBrowserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,12 @@
 		442D4C531300A526005D24C8 /* PushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotification.m; sourceTree = "<group>"; };
 		442D4C541300A526005D24C8 /* UIControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControls.h; sourceTree = "<group>"; };
 		442D4C551300A526005D24C8 /* UIControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControls.m; sourceTree = "<group>"; };
-		442D4EE01303279E005D24C8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		445FE3BA133AB1520038A8BB /* ChildBrowserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserCommand.h; sourceTree = "<group>"; };
+		445FE3BB133AB1520038A8BB /* ChildBrowserCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserCommand.m; sourceTree = "<group>"; };
+		445FE3BC133AB1520038A8BB /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserViewController.h; sourceTree = "<group>"; };
+		445FE3BD133AB1520038A8BB /* ChildBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserViewController.m; sourceTree = "<group>"; };
+		445FE3BE133AB1520038A8BB /* ChildBrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildBrowserViewController.xib; sourceTree = "<group>"; };
+		445FE432133B51FC0038A8BB /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ticketseller_mobile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ticketseller_mobile-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +181,7 @@
 				3053AC6E109B7857006FCFE7 /* VERSION */,
 				8D1107310486CEB800E47090 /* ticketseller_mobile-Info.plist */,
 				307D28A1123043350040C0FA /* PhoneGapBuildSettings.xcconfig */,
-				442D4EE01303279E005D24C8 /* Entitlements.plist */,
+				445FE432133B51FC0038A8BB /* Entitlements.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -229,6 +237,11 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				445FE3BA133AB1520038A8BB /* ChildBrowserCommand.h */,
+				445FE3BB133AB1520038A8BB /* ChildBrowserCommand.m */,
+				445FE3BC133AB1520038A8BB /* ChildBrowserViewController.h */,
+				445FE3BD133AB1520038A8BB /* ChildBrowserViewController.m */,
+				445FE3BE133AB1520038A8BB /* ChildBrowserViewController.xib */,
 				442D4C4E1300A526005D24C8 /* NativeControls.h */,
 				442D4C4F1300A526005D24C8 /* NativeControls.m */,
 				442D4C501300A526005D24C8 /* NavigationBar.h */,
@@ -319,6 +332,7 @@
 				3009C2AD127B894C007F4BC6 /* icon@2x.png in Resources */,
 				3009C2B2127B897D007F4BC6 /* Default-Landscape.png in Resources */,
 				3009C2B3127B897D007F4BC6 /* Default-Portrait.png in Resources */,
+				445FE3C1133AB1520038A8BB /* ChildBrowserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +380,8 @@
 				442D4C571300A527005D24C8 /* NavigationBar.m in Sources */,
 				442D4C581300A527005D24C8 /* PushNotification.m in Sources */,
 				442D4C591300A527005D24C8 /* UIControls.m in Sources */,
+				445FE3BF133AB1520038A8BB /* ChildBrowserCommand.m in Sources */,
+				445FE3C0133AB1520038A8BB /* ChildBrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
