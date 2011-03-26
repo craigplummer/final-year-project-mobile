@@ -63,7 +63,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 	
 	NSString * jsCallBack = nil;
 	jsCallBack = [[NSString alloc] initWithFormat:@"gotDeviceToken('%@');", tokenString]; 
-    [webView stringByEvaluatingJavaScriptFromString:jsCallBack]; 
+    [webView stringByEvaluatingJavaScriptFromString:jsCallBack];
+	[jsCallBack release];
 }  
 
 - (void)application:(UIApplication*)application  

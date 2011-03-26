@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Ticketseller Mobile</title>
-		<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
+	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
 	<script src="http://code.jquery.com/jquery-1.5.min.js"></script>
 	<script src="lawnchair/Lawnchair.js"></script>
 	<script src="lawnchair/DOMStorageAdaptor.js"></script>
@@ -11,6 +11,11 @@
 	<script src="phonegap.js"></script>
 	<script src="scripts/navigationBar.js"></script>
 	<script src="scripts/NativeControls.js"></script>
+	<script language=javascript>
+      $(document).bind("mobileinit", function () {
+            $.mobile.ajaxLinksEnabled = false;
+      });
+	</script>
 	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 	
 	<script type="text/javascript">
@@ -79,7 +84,7 @@
 			
 			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
 			<li data-role="list-divider">Featured</li> 
-			<li><a onclick="PhoneGap.exec('ChildBrowserCommand.showWebPage','http://mobile.twitter.com/company');">Featured Events</a></li> 
+			<li><a href="featured.html">Featured Events</a></li> 
 			<li><a href="events/special.html">Special Offers</a></li>
 		</ul> 
 		

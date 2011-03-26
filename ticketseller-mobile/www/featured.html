@@ -15,15 +15,15 @@
 			
 			$.each(data, function(entryIndex, entry){
 				var html ='<li>';
-				html += '<h3><a href="eventdetail.html?id=' + entry['id'] + '">'
+				html += '<h3><a onclick="PhoneGap.exec(\'ChildBrowserCommand.showWebPage\', \'http://ts.craigplummer.co.uk/orders/details/?eventid=' + entry['id'] + '\');">'
 				html += entry['eventtitle']; + '</a></h3>'
-				html +=	'<p class="ui-li-aside">' + entry['eventdate']; + '</p>'
-				html += '<p><strong>' + entry['venue']; + '</strong></p>'
+				html +=	'<p><strong>' + entry['eventdate']; + '</strong></p>'
+				html += '<p>' + entry['venue']; + '</p>'
 				html += '</li>';
 				$('#list').append(html);
 			});
 			
-			$("#page").page("destroy").page();
+			$("#list").listview("destroy").listview()
 		});
 		
 		 
@@ -38,12 +38,13 @@
 	<script src="../lawnchair/Lawnchair.js"></script>
 	<script src="../lawnchair/DOMStorageAdaptor.js"></script>
 	<script src="../lawnchair/LawnchairAdaptorHelpers.js"></script>
-	<script src="../jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
-	
+	<script src="phonegap.js"></script>
+	<script src="scripts/NativeControls.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
 
 </head>
-<body>
-	<div data-role="page" data-theme="b" id="page">
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="b" id="jqm-home">
 
 		
 		<div data-role="content">
