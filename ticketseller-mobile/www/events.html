@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ticketseller Mobile</title>
+	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a3.css" />
+	<script src="../scripts/jquery-1.5.min.js"></script>
+	<script type="text/javascript">
+		
+	$(document).ready(function() {	
+	
+				var urlParams = {};
+			(function () {
+				var e,
+				a = /\+/g,  // Regex for replacing addition symbol with a space
+				r = /([^&=]+)=?([^&]*)/g,
+				d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+				q = window.location.search.substring(1);
+
+				while (e = r.exec(q))
+				urlParams[d(e[1])] = d(e[2]);
+		})();
+		
+		var jsonUrl = "http://ts.craigplummer.co.uk/events/categorylist?format=json&id="+urlParams.id
+	
+		$("#list").listview();
+		
+		$.getJSON(jsonUrl, function(data) {
+			
+			$.each(data, function(entryIndex, entry){
+				var html ='<li>';
+				html += '<h3><a onclick="PhoneGap.exec(\'ChildBrowserCommand.showWebPage\', \'http://ts.craigplummer.co.uk/orders/details/?eventid=' + entry['id'] + '\');">'
+				html += entry['eventtitle']; + '</a></h3>'
+				html +=	'<p><strong>' + entry['eventdate']; + '</strong></p>'
+				html += '<p>' + entry['venue']; + '</p>'
+				html += '</li>';
+				$('#list').append(html);
+			});
+			
+			$("#list").listview("destroy").listview()
+		});
+		
+		 
+		
+		
+	
+	});
+	
+	
+	
+	</script>
+	<script src="../lawnchair/Lawnchair.js"></script>
+	<script src="../lawnchair/DOMStorageAdaptor.js"></script>
+	<script src="../lawnchair/LawnchairAdaptorHelpers.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="scripts/NativeControls.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
+
+</head>
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="b" id="jqm-home">
+		
+		<div data-role="header"><a href="#" data-rel="back" data-icon="arrow-l">Back</a><h1>Ticketseller</h1></div> 
+		
+		<div data-role="content">
+		
+		<ul data-role="listview" data-theme="c" id="list">
+			<li data-role="list-divider">Featured Events</li>
+		</ul>
+		
+		</div>
+
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ticketseller Mobile</title>
+	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a3.css" />
+	<script src="../scripts/jquery-1.5.min.js"></script>
+	<script type="text/javascript">
+	$(document).bind("mobileinit", function () {
+            $.mobile.ajaxLinksEnabled = false;
+      });
+		
+	$(document).ready(function() {	
+	
+		$("#list").listview();
+		
+		$.getJSON('http://ts.craigplummer.co.uk/categories/list/?format=json', function(data) {
+			
+			$.each(data, function(entryIndex, entry){
+				var html ='<li>';
+				html += '<a href="tags.html?id=' + entry['id'] + '">'
+				html += entry['name']; + '</a>'
+				html += '</li>';
+				$('#list').append(html);
+			});
+			
+			$("#list").listview("destroy").listview()
+		});
+		
+		 
+		
+		
+	
+	});
+	
+	
+	
+	</script>
+	<script src="../lawnchair/Lawnchair.js"></script>
+	<script src="../lawnchair/DOMStorageAdaptor.js"></script>
+	<script src="../lawnchair/LawnchairAdaptorHelpers.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="scripts/NativeControls.js"></script>
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
+
+</head>
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="b" id="jqm-home">
+		
+		<div data-role="header"><a href="#" data-rel="back" data-icon="arrow-l">Back</a><h1>Ticketseller</h1></div> 
+		
+		<div data-role="content">
+		
+		<ul data-role="listview" data-theme="c" id="list">
+			<li data-role="list-divider">Categories</li>
+		</ul>
+		
+		</div>
+
+	</div>
+</body>
+</html>
+
