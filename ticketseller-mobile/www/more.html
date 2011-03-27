@@ -46,7 +46,21 @@
     //
     function onDeviceReady() {
 	
-	
+		window.plugins.nativeControls.createTabBar(); 
+		window.plugins.nativeControls.createTabBarItem("id_tab1","Dashboard","www/53-house.png", {
+		onSelect: function (){
+			document.location = 'home1.html'}
+		});
+		 
+		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","www/06-magnify.png"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","www/28-star.png"); 
+		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","www/162-receipt.png");
+		window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More", {
+		onSelect: function(){
+			document.location = 'more.html'}
+		}); 
+		window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", "id_tab3", "id_tab4", "id_tab5"); 
+		
 	
 			
     }
@@ -101,6 +115,8 @@
 		</ul>
 		
 		</div>
+		
+
 
 	</div>
 </body>
