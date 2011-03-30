@@ -59,6 +59,60 @@
 	<script src="phonegap.js"></script>
 	<script src="scripts/NativeControls.js"></script>
 	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
+	<script type="text/javascript">
+	
+	// Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+	
+	
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+		// If you want to prevent dragging, uncomment this section
+
+	/*function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false); */
+
+
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+	
+		window.plugins.nativeControls.createTabBar(); 
+		window.plugins.nativeControls.createTabBarItem("id_tab1","Dashboard","www/53-house.png", {
+		onSelect: function (){
+			document.location = 'home1.html'}
+		});
+		 
+		window.plugins.nativeControls.createTabBarItem("id_tab2","Search","www/06-magnify.png", {
+		onSelect: function (){
+			document.location = 'fulllisting.html'}
+		}); 
+		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","www/28-star.png", {
+		onSelect: function (){
+			document.location = 'alerts.html'}
+		}); 
+		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","www/162-receipt.png", {
+		onSelect: function (){
+			document.location = 'mytickets.html'}
+		});
+		window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More", {
+		onSelect: function(){
+			document.location = 'more.html'}
+		}); 
+		window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", "id_tab3", "id_tab4", "id_tab5"); 
+		
+		}
+		
+</script>
 
 </head>
 <body onLoad="onLoad()">

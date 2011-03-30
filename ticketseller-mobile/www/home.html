@@ -28,6 +28,7 @@
     // 
 	
 	var client_browser;
+	var userData = new Lawnchair('new');
 	
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -45,6 +46,24 @@
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
     function onDeviceReady() {
+	
+	userData.get("login", function(r) {
+	
+		devicetoken = r.Token;
+		useremail = r.Username;
+
+	});
+	
+		$.ajax({
+			
+			type: "GET",
+			url: 'http://ts.craigplummer.co.uk/account/device/?format=json',
+			data: "email="+useremail+"&token="+devicetoken,
+			dataType: "json",
+			success: console.log("saved")}); 
+	
+	
+
 		
 		window.plugins.nativeControls.createTabBar(); 
 		window.plugins.nativeControls.createTabBarItem("id_tab1","Dashboard","www/53-house.png", {
@@ -52,9 +71,18 @@
 			document.location = 'home1.html'}
 		});
 		 
-		window.plugins.nativeControls.createTabBarItem("id_tab2","Browse","www/06-magnify.png"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","www/28-star.png"); 
-		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","www/162-receipt.png");
+		window.plugins.nativeControls.createTabBarItem("id_tab2","Search","www/06-magnify.png", {
+		onSelect: function (){
+			document.location = 'fulllisting.html'}
+		}); 
+		window.plugins.nativeControls.createTabBarItem("id_tab3","Alerts","www/28-star.png", {
+		onSelect: function (){
+			document.location = 'alerts.html'}
+		}); 
+		window.plugins.nativeControls.createTabBarItem("id_tab4","My Tickets","www/162-receipt.png", {
+		onSelect: function (){
+			document.location = 'mytickets.html'}
+		});
 		window.plugins.nativeControls.createTabBarItem("id_tab5","More","tabButton:More", {
 		onSelect: function(){
 			document.location = 'more.html'}
@@ -77,28 +105,26 @@
 		
 		<div data-role="content">
 		
-			<p id="devicetoken">Hello</p>
 			
 			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
 			<li data-role="list-divider">Featured</li> 
-			<li><a href="featured.html">Featured Events</a></li> 
-			<li><a href="events/special.html">Special Offers</a></li>
+			<li><a href="featured.html" data-transition="fade">Featured Events</a></li> 
+			<li><a href="resturants.html">Restaurant Search</a></li>
 		</ul> 
 		
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
 			<li data-role="list-divider">Events</li> 
-			<li><a href="events/venue.html">Events by Venue</a></li> 
-			<li><a href="categories.html">Events by Category</a></li>
-			<li><a href="events/nearby.html">Events Nearby</a></li>
+			<li><a href="regions.html" data-transition="fade">Events by Venue</a></li> 
+			<li><a href="categories.html" data-transition="slideup">Events by Category</a></li>
 
 		</ul> 
 		
 		
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
 			<li data-role="list-divider">My Account</li> 
-			<li><a href="account/alerts.html">My Alerts</a></li> 
-			<li><a href="account/tickets.html">My Tickets</a></li>
-			<li><a href="account/settings.html">Account Settings</a></li>
+			<li><a href="alerts.html">My Alerts</a></li> 
+			<li><a href="mytickets.html">My Tickets</a></li>
+			<li><a href="more.html">Account Settings</a></li>
 		</ul> 
 		
 			

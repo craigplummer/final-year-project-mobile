@@ -3,22 +3,46 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Ticketseller Mobile</title>
-	<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.0a3.min.css" />
-	<script src="scripts/jquery-1.5.min.js"></script>
-	<script src="lawnchair/Lawnchair.js"></script>
-	<script src="lawnchair/DOMStorageAdaptor.js"></script>
-	<script src="lawnchair/LawnchairAdaptorHelpers.js"></script>
+	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a3.css" />
+	<script src="../scripts/jquery-1.5.min.js"></script>
 	<script type="text/javascript">
 	$(document).bind("mobileinit", function () {
             $.mobile.ajaxLinksEnabled = false;
       });
-	  </script>
-	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
+		
+	$(document).ready(function() {	
+	
+		$("#list").listview();
+		
+		$.getJSON('http://ts.craigplummer.co.uk/regions/list/?format=json', function(data) {
+			
+			$.each(data, function(entryIndex, entry){
+				var html ='<li>';
+				html += '<a href="venues.html?id=' + entry['id'] + '">'
+				html += entry['name']; + '</a>'
+				html += '</li>';
+				$('#list').append(html);
+			});
+			
+			$("#list").listview("destroy").listview()
+		});
+		
+		 
+		
+		
+	
+	});
+	
+	
+	
+	</script>
+	<script src="../lawnchair/Lawnchair.js"></script>
+	<script src="../lawnchair/DOMStorageAdaptor.js"></script>
+	<script src="../lawnchair/LawnchairAdaptorHelpers.js"></script>
 	<script src="phonegap.js"></script>
 	<script src="scripts/NativeControls.js"></script>
-	<script src="scripts/ChildBrowser.js"></script>
-	
-	<script type="text/javascript">
+	<script src="jquery-mobile/jquery.mobile-1.0a3.min.js"></script>
+		<script type="text/javascript">
 	
 	// Call onDeviceReady when PhoneGap is loaded.
     //
@@ -26,15 +50,9 @@
     // When PhoneGap is loaded and talking with the native device,
     // it will call the event `deviceready`.
     // 
-	var twitterEmail;
-	var client_browser;
-	var errorHandler;
-	var ts;
-	var userData = new Lawnchair('new');
+	
 	
     function onLoad() {
-			
-	
         document.addEventListener("deviceready", onDeviceReady, false);
     }
 	
@@ -49,8 +67,8 @@
 
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
-	function onDeviceReady() {
-		
+    function onDeviceReady() {
+	
 		window.plugins.nativeControls.createTabBar(); 
 		window.plugins.nativeControls.createTabBarItem("id_tab1","Dashboard","www/53-house.png", {
 		onSelect: function (){
@@ -75,76 +93,25 @@
 		}); 
 		window.plugins.nativeControls.showTabBarItems("id_tab1", "id_tab2", "id_tab3", "id_tab4", "id_tab5"); 
 		
-
-	}
-
-	
-
-		   
-
-	function launchTwitter() {
-	
-	console.log("hello world");
-	
-
-	
-	userData.get("login", function(r) {
-	
-	console.log(r.Username);
-	twitter = "http://ts.craigplummer.co.uk/account/twitter/?email="+r.Username;
-	console.log(twitter)
-	PhoneGap.exec('ChildBrowserCommand.showWebPage', twitter);
-	});
-	
-	
-	}
-
-	function launchAccount() {
-	
-	userData.get("login", function(r) {
-	
-	
-	url = "http://ts.craigplummer.co.uk/account/mobilesettings/?email="+r.Username;
-	
-	PhoneGap.exec('ChildBrowserCommand.showWebPage', url);
-	});
-	
-
-	
-	}
-	
-	
-		
-
-	
-	
-	var theData = new Lawnchair({adaptor:'dom'});
-		
-			function doLogout() {
-			theData.remove('login');
-			document.location = 'index.html';
 		}
+		
+</script>
 
-	</script>
 </head>
-<body onLoad="onLoad();">
+<body onLoad="onLoad()">
 	<div data-role="page" data-theme="b" id="jqm-home">
-	
-		<div data-role="header"><h1>Ticketseller Mobile</h1></div> 
-
+		
+		<div data-role="header"><a href="#" data-rel="back" data-icon="arrow-l">Back</a><h1>Ticketseller</h1></div> 
+		
 		<div data-role="content">
 		
-		<ul data-role="listview" data-theme="c">
-			<li><a href="resturants.html">Resturant Finder</a></li>
-			<li><a href="javascript:launchAccount();">Account Settings</a></li>
-			<li><a onclick="javascript:launchTwitter();">Twitter Settings</a></li>
-			<li><a onclick="javascript:doLogout();">Logout</a></li>
+		<ul data-role="listview" data-theme="c" id="list">
+			<li data-role="list-divider">Regions</li>
 		</ul>
 		
 		</div>
-		
-
 
 	</div>
 </body>
 </html>
+

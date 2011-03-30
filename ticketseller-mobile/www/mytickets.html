@@ -6,20 +6,41 @@
 	<link rel="stylesheet" href="../jquery-mobile/jquery.mobile-1.0a3.css" />
 	<script src="../scripts/jquery-1.5.min.js"></script>
 	<script type="text/javascript">
-	$(document).bind("mobileinit", function () {
-            $.mobile.ajaxLinksEnabled = false;
-      });
 		
 	$(document).ready(function() {	
 	
+	var userData = new Lawnchair('new');
+	
+	userData.get("login", function(r) {
+	
+	email = r.Username;
+	
+	});
+	
+				var urlParams = {};
+			(function () {
+				var e,
+				a = /\+/g,  // Regex for replacing addition symbol with a space
+				r = /([^&=]+)=?([^&]*)/g,
+				d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+				q = window.location.search.substring(1);
+
+				while (e = r.exec(q))
+				urlParams[d(e[1])] = d(e[2]);
+		})();
+		var jsonUrl = "http://ts.craigplummer.co.uk/orders/list?format=json&email="+email;
+		venue = "http://ts.craigplummer.co.uk/venues/details?id="+urlParams.id;
+		
 		$("#list").listview();
 		
-		$.getJSON('http://ts.craigplummer.co.uk/categories/list/?format=json', function(data) {
+		$.getJSON(jsonUrl, function(data) {
 			
 			$.each(data, function(entryIndex, entry){
 				var html ='<li>';
-				html += '<a href="tags.html?id=' + entry['id'] + '">'
-				html += entry['name']; + '</a>'
+				html += '<h3><a onclick="PhoneGap.exec(\'ChildBrowserCommand.showWebPage\', \'http://ts.craigplummer.co.uk/orders/ticketdetail/?id=' + entry['id'] + '\');">'
+				html += entry['eventtitle']; + '</a></h3>'
+				html +=	'<p><strong>' + entry['eventdate']; + '</strong></p>'
+				html += '<p>' + entry['venue']; + '</p>'
 				html += '</li>';
 				$('#list').append(html);
 			});
@@ -101,12 +122,13 @@
 <body onLoad="onLoad()">
 	<div data-role="page" data-theme="b" id="jqm-home">
 		
-		<div data-role="header"><a href="#" data-rel="back" data-icon="arrow-l">Back</a><h1>Ticketseller</h1></div> 
+		<div data-role="header"><a href="#" data-rel="back" data-icon="arrow-l">Back</a><h1>Ticketseller</h1> </div>
+		
 		
 		<div data-role="content">
 		
 		<ul data-role="listview" data-theme="c" id="list">
-			<li data-role="list-divider">Categories</li>
+			<li data-role="list-divider">My Tickets</li>
 		</ul>
 		
 		</div>

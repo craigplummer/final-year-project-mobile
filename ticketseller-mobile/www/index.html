@@ -23,6 +23,7 @@
     // When PhoneGap is loaded and talking with the native device,
     // it will call the event `deviceready`.
     // 
+	var theData = new Lawnchair({adaptor:'dom'});
 	var client_browser;
 	
     function onLoad() {
@@ -48,11 +49,12 @@
     function onDeviceReady() {
 	
 	
+	
 	try {client_browser = ChildBrowser.install();} 
 	catch(e) { client_browser = null };
 	
 	
-	var theData = new Lawnchair({adaptor:'dom'});
+	
 	
 	
 	theData.get('login',
@@ -84,9 +86,15 @@ function loadRegister(){if (client_browser != null
 		function doSave() {
 		
 			var theData = new Lawnchair({adaptor:'dom'});
-			var userAccount = new Lawnchair({adaptor: 'dom'});
 		
 			// Retrieve the values from the form elements
+			var token = devicetoken;
+			
+			if(typeof token == "object"){
+			token = "" }
+			
+			console.log(token);
+			
 			var email = document.getElementById('login_email').value;
 			var password = document.getElementById('login_password').value;
 			if (email == "") {
@@ -104,7 +112,8 @@ function loadRegister(){if (client_browser != null
 			success: function(data) {
 			if(data.success == true) { // Verified!
 		
-								var theLogin = {key:'login', Username:email, Password:password};
+								var theLogin = {key:'login', Username:email, Password:password, Token:token};
+								console.log(theLogin);
 								// Send them to the data store
 								theData.save(theLogin);
 								// Go to the main function page
@@ -128,14 +137,13 @@ function loadRegister(){if (client_browser != null
 
 	<div data-role="page" data-theme="a" id="jqm-home">
 	
-			<div data-role="header"><h1>Ticketseller Mobile</h1></div> 
+			<div data-role="header"><h1>Ticketseller</h1></div> 
 
 
 		<div data-role="content"> 
 		
 
 			<form action="" method="post">
-				<span id="devicetoken">&nbsp;</span>
 				<span id="theMessage">&nbsp;</span>
 				<div data-role="fieldcontain"> 
 		         	<label for="login_email">Email:</label> 
@@ -147,10 +155,11 @@ function loadRegister(){if (client_browser != null
 				</div>
 					
 					<button type="button" data-theme="b" onclick="javascript:doSave();">Login</button>
+					<button type="button" data-theme="a" onclick="loadRegister();">Register Account</button>
 					
 				</div>
 			</form>
-			<button type="button" data-theme="a" onclick="loadRegister();">Register Account</button>
+			
 		</div>
 	</div>
 </body>

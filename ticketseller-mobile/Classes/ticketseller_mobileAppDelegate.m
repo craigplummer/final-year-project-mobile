@@ -45,24 +45,10 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 	[tokenString replaceOccurrencesOfString:@">" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];  
 	[tokenString replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];  
 	
-	// Create the NSURL for the request  
-	NSString *urlFormat = @"https://go.urbanairship.com/api/device_tokens/%@";  
-	NSURL *registrationURL = [NSURL URLWithString:[NSString stringWithFormat:  
-												   urlFormat, tokenString]]; 
-	// Create the registration request  
-	NSMutableURLRequest *registrationRequest = [[NSMutableURLRequest alloc]  
-												initWithURL:registrationURL];  
-	[registrationRequest setHTTPMethod:@"PUT"];  
-	
-	// And fire it off  
-	NSURLConnection *connection = [NSURLConnection connectionWithRequest:registrationRequest  
-																delegate:self];  
-	[connection start];  
-	
-	NSLog(@"We successfully registered for push notifications");  
+
 	
 	NSString * jsCallBack = nil;
-	jsCallBack = [[NSString alloc] initWithFormat:@"gotDeviceToken('%@');", tokenString]; 
+	jsCallBack = [[NSString alloc] initWithFormat:@"devicetoken = '%@';", tokenString]; 
     [webView stringByEvaluatingJavaScriptFromString:jsCallBack];
 	[jsCallBack release];
 }  
